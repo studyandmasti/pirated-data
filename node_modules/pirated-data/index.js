@@ -1,15 +1,15 @@
 var firstMaleName = ['Hari','sam','Mukund','Nabaghan','Abhishek','Suresh','Santunu','Akashya','Haribol','Arjun','Madhab','Balkrushna']
 var title = ['Sahu','Behera','Sahoo','Nayak','Dash','Das','Pati','Pattanayak','Muduli','Parida','Samantaray','Mallick','Malick','Barik','Barika']
 var emlDomain =['gmail.com','yahoo.com','hotmail.com','rediffmail.com','mns.com','github.com','bandu.com','baidu.com','aol.com','comcast.net']
+var actfirName;
+
+
 module.exports = {
- 
+   
   // add : function(a,b){
   //   return a+b;
   // },
-  firstNameGenerator : function(){
-   var number =  Math.floor(Math.random() * 10);
-   return firstMaleName[number];
-  },
+  
   lastNameGenerator : function(){
     var number = Math.floor(Math.random() * 10);
     return title[number];
@@ -31,10 +31,22 @@ module.exports = {
     //var masterCard = Math.floor(Math.random() * (5500000000000000 - 510000000000000 + 1) ) + 510000000000000;
     return visaElectron;
   },
-  // emailIdGenerator : function(){
-  //   firstNameGenerator();
-  //   var emlNum = Math.floor(Math.random() * (999 - 100 + 1) ) + 100;
-  //   var domain = Math.floor(Math.random() * 10);
-  //   return firstMaleName[number]+emlNum+'@'+emlDomain[domain];
-  // }
+  
+   firstNameGenerator:function(){
+    var number =  Math.floor(Math.random() * 10);
+    return actfirName = firstMaleName[number];
+   },
+  emailIdGenerator: function(){
+    // this.firstNameGenerator();
+    var emlNum = Math.floor(Math.random() * (999 - 100 + 1) ) + 100;
+    var domain = Math.floor(Math.random() * 10);
+    return actfirName+emlNum+'@'+emlDomain[domain];
+  },
+  userId: function(){
+    var usrIdNum = Math.floor(Math.random() * (999 - 100 + 1) ) + 100;
+    return userId = actfirName+usrIdNum;
+  },
+  password: function(){
+    
+  }
 }
