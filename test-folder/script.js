@@ -18,3 +18,5 @@ var eml = userData.emailIdGenerator();
 console.log(eml);
 var usrId = userData.userId();
 console.log(usrId);
+var pwd = userData.password(10);
+console.log(pwd);
