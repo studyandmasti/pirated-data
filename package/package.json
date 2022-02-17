@@ -11,7 +11,10 @@
     "url": "git+https://github.com/satya319/pirated-data.git"
   },
   "keywords": [
-    "sampledata","mockdata","user data","test data"
+    "sampledata",
+    "mockdata",
+    "user data",
+    "test data"
   ],
   "author": "Satyajit319",
   "license": "ISC",

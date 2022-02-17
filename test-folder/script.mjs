@@ -1,0 +1,32 @@
+import userData from '../../pirated-data/package/copyed.js';
+
+// var result = userData.add(4,5)
+// console.log(result);
+// var startname = userData.firstNameGenerator();
+// console.log("First name: "+startname);
+// var lastName =userData.lastNameGenerator();
+// console.log("Last name: "+lastName);
+// var age = userData.adultAgeGenerator();
+// console.log("Age: "+age);
+// var mobnum = userData.mobileNumberGenerator();
+// console.log("Mobile number of user: "+mobnum);
+// var card = userData.financialCardGenerator();
+// console.log("Card number: "+card);
+// var aadhar = userData.aadharNumberGenerator();
+// console.log("Aaadhar number: "+aadhar);
+// var eml = userData.emailIdGenerator();
+// console.log("Email id: "+eml);
+// var usrId = userData.userIdGenerator();
+// console.log("Userid of user: "+usrId);
+// var bnkName = userData.bankNameGenerator();
+// console.log("Bank name of user: "+bnkName);
+// var pwd = userData.passwordGenerator(10);
+// console.log("Password of the user: "+pwd);
+// var gender = userData.genderGenerator();
+// console.log("Gender of the user:"+gender);
+// var state = userData.stateGenerator();
+// console.log("State name is: "+state);
+var biology = userData.BiologicalData();
+console.log(biology);
+// var hrclr = userData.hairColorGenerator();
+// console.log("user hair color is: "+hrclr);
