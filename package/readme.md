@@ -1,20 +1,41 @@
+![Logo](package\Images\pirated-data-logo.png)
 # Pirated data 
 **Install the package**
 ```
 npm i pirated-data
 ```
 ## Data provided for the user are 
+
 - First name
 - Last name
 - Age
 - Mobile number
-- Financial card number
 - Aadhar number( unique identification number)
 - Email-id
 - User Id
 - Password
+- Financial card
+  - Card Number
+  - Card Holder Name
+  - Validthru
+  - Cvv
+- Person's Biological Data
+  - First Name
+  - Last Name
+  - Gender
+  - Hair Color
+  - Age
+  - Eye Color
+  - Blood group
+  - Weight
+  - Body Skin Color
+- Address
+  - Full Name
+  - State Name
+  - District Name
 
 ### To use the package's individual function
+-----------------------------------------------
 ```
 // For getting first name 
 const userData = require('pirated-data');
@@ -82,7 +103,10 @@ const userData = require('pirated-data');
 
 
 ```
-### Pirated-Data also supports generate sets of data like:- Address, Biological Details.
+### Pirated-Data also supports generate sets of data
+- Address
+- Biological Details.
+
 To generate biological details and address use the below functions
 ```
 /* To generate biological details of an user */
@@ -92,6 +116,8 @@ const userData = require('pirated-data');
 /* To generate Address of an user */
 const userData = require('pirated-data');
 var address = userData.addressGenerator();
-
-
 ```
+## Need More feature
+_________________________________
+If you want to more feature of this package just create an issue [Here.](https://github.com/satya319/pirated-data/issues)
+

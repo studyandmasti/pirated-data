@@ -1,6 +1,6 @@
 {
   "name": "pirated-data",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Generating sample user data like name, age, mobilenumber, aadharnumber etc for testing.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "sampledata",
     "mockdata",
     "user data",
-    "test data"
+    "test data",
+    "Selenium mock data",
+    "cypress mock data"
   ],
   "author": "Satyajit319",
   "license": "ISC",
