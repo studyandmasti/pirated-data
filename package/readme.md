@@ -1,4 +1,4 @@
-![Logo](package\Images\pirated-data-logo.png)
+![Logo](https://github.com/satya319/pirated-data/blob/main/package/Images/pirated-data-logo.png)
 # Pirated data 
 **Install the package**
 ```
