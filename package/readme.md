@@ -1,4 +1,4 @@
-![Logo](package\Images\pirated-data-logo.png)
+![Logo](https://github.com/satya319/pirated-data/blob/main/package/Images/pirated-data-logo.png)
 # Pirated data 
 **Install the package**
 ```
@@ -105,7 +105,19 @@ const userData = require('pirated-data');
 ```
 ### Pirated-Data also supports generate sets of data
 - Address
+  - Full name
+  - State name(India)
+  - District name (India)
 - Biological Details.
+  - Full name
+  - Gender
+  - Hair color
+  - Age
+  - Eye color
+  - Blood group
+  - Weight
+  - Skin color
+
 
 To generate biological details and address use the below functions
 ```
