@@ -1,5 +1,13 @@
-![Logo](https://github.com/satya319/pirated-data/blob/main/package/Images/pirated-data-logo.png)
-# Pirated data 
+
+<p align="center">
+  <a href="#">
+    <img alt="Pirated-Data" src="https://github.com/satya319/pirated-data/blob/main/package/Images/pirated-data-logo.png?raw=true" width="60" />
+  </a>
+</p>
+<h1 align="center">
+ Pirated-Data
+</h1>
+ 
 **Install the package**
 ```
 npm i pirated-data
@@ -24,6 +32,7 @@ npm i pirated-data
   - Last Name
   - Gender
   - Hair Color
+  - Date of birth
   - Age
   - Eye Color
   - Blood group
@@ -112,6 +121,7 @@ const userData = require('pirated-data');
   - Full name
   - Gender
   - Hair color
+  - Date of birth
   - Age
   - Eye color
   - Blood group
