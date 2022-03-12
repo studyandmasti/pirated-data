@@ -59,10 +59,6 @@ var hairColor = ['Black', 'Brown', 'Red', 'Blond'];
 var skinColor = ['Ivory', 'Beige', 'Alabaster', 'Honey', 'Carotenoid', 'Tan', 'Caramel', 'Bronze', 'Mahogany', 'Chestnut', 'Buff', 'Peaches', 'Umber', 'Praline', 'Espresso Brown', 'Porcelain', 'Hickory', 'Mustard', 'Sable', 'Almond', 'Bisque', 'Teak', 'Cacao', 'Pecan', 'Saddle Brown'];
 var bloodGroup = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
 var eyeColor = ['Brown', 'Blue', 'Hazel', 'Amber', 'Green', 'Gray', 'Red'];
-var PblSctrBnkName = ['Bank of Baroda', 'Bank of India', 'Bank of Maharashtra', 'Canara Bank', 'Central Bank of India', 'Indian Bank', 'Indian Overseas Bank', 'Punjab & Sind Bank', 'Punjab National Bank', 'State Bank of India', 'UCO Bank', 'Union Bank of India'];
-// var iFscCode = [' BARB0',''];
-var breakfastName = ['Aloo paratha', 'Ackee and saltfish ', 'Aloo paratha', 'Anadama bread', 'Apple dumpling', 'Arepa', 'Bacon', 'egg and cheese sandwich', 'Bacon and eggs', 'Bacon sandwich', 'Bagel', 'Bagel and cream cheese', 'Baked beans', 'Banana', 'Banana nut bread', 'Banana bread', 'Barley honey', 'Bear claw', 'Bhakri', 'Bhatoora', 'Bialy', 'Biscuits and gravy', 'Bizcocho', 'Boiled egg', 'Boudin', 'Bran flakes', 'Bread', 'Breadfruit', 'Brunch Bar', 'yogurt', 'Calas', 'Cereal', 'Cereal bar', 'Cereal germ', 'Changua', 'Chicken and waffles', 'Chilaquiles', 'Chipped beef on toast', 'Chocolate gravy', 'Chouriço', 'Chwee kueh', 'Cinnamon roll', 'cinnamon toast crunch', 'Buttered crumpet', 'Coffee cake', 'Dosa', 'Collops', 'Congee', 'Cottage cheese', 'Creamed eggs on toast', 'Cretons', 'Croissant', 'Crumpet', 'Cuban bread', 'Dim sum', 'Dosa', 'Doughnut or Donut', 'Doubles', 'Dutch baby pancake', 'Eggs Benedict', 'Egg sandwich', 'Eggs and brains', 'Eggs Beauregard', 'Eggs Benedict', 'Egg bhurji', 'Eggs bourguignon', 'Eggo cereal', 'Eggs Neptune', 'Eggs Sardou', 'Enchilada', 'Energy bar', 'English muffin', 'Facturas', 'Fatoot samneh', 'French toast', 'Fried bread', 'Fried cheese', 'Fried chicken', 'Frybread', 'Fried egg', 'Frittata', 'Frühschoppen', 'Fruit pudding', 'Gnocchi', 'Goetta', 'Gogli', 'Granola', 'Griddle scone', 'Grillades', 'Grits', 'Halwa poori', 'Hamburger', 'Hangtown Fry', 'Honey Puffs', 'Huevos pericos', 'Huevos rancheros', 'Idli', 'Idli with sambar', 'Kulcha with chole ', 'Katogo', 'Kedgeree', 'Khaman', 'Kiribath', 'Kolache', 'Kulcha', 'Kulich', 'Malasadas', 'McMuffin', 'Meeshay', 'Milk toast', 'Oatmeal', 'Omelette', 'Orange juice', 'Palm syrup', 'Palmier', 'Pancake', 'Peanut butter', 'Pebete', 'Protein bar', 'Pumpkin bread', 'Ham and cheese quiche', 'Quick bread', 'Raisin bran', 'Raisin bread', 'Reindeer meat', 'Rolled oats', 'Roti canai', 'Roti prata', 'Salt cod', 'Satti', 'Sausage', 'Sausage gravy', 'Scone', 'Scrambled eggs', 'Scrapple', 'Shaobing', 'Green smoothie', 'Smoothie', 'Soft-boiled eggs', 'Suhur', 'Teacake', 'Toast', 'Toaster Strudels', 'Tomato omelette', 'Touton', 'Tripe', 'Upma Dosa', 'Vegan yogurt with blueberries', 'Viennoiserie', 'Waffle', 'Water biscuit', 'Weisswurst', 'Waffles with strawberries', 'Youtiao', 'Zucchini bread'];
-var lunchCurriesName = ['Mulangi sambar', 'Leaf curry', 'Brinjal curry', 'Ladiesfinger curry', 'Patato curry', 'Chicken curry', 'Palak paneer', 'Kaju curry', 'Veg masala curry', 'Pappu charu', 'Tamato rasam', 'Govi paneer', 'Paneer tikka', 'Chicken moglai', 'Chicken lollypop', 'Chicken 65', 'Chicken tikka', 'Chicken masala curry', 'Butter chicken', 'Amritsari Chicken Masala', 'Kolhapuri Chicken Curry', 'Chicken Xacuti', 'Chicken Do Pyaaza', 'Sali Marghi', 'Murgh Rezala', 'Chicken Stew'];
 var stateName = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
 var stateAndhraDist = ['Anantapuram', 'Chittoor', 'East Godavari', 'Guntur', 'YSR Kadapa', 'Krishna', 'Kurnool', 'Prakasam', 'Sri Potti Sriramulu Nellore', 'Srikakulam', 'Visakhapatnam', 'Vizianagaram', 'West Godavari'];
 var stateArunachalDist = ['Anjaw', 'Changlang', 'Dibang Valley', 'East Kameng', 'East Siang', 'Kamle', 'Kra Daadi', 'Kurung Kumey', 'Lepa Rada', 'Lohit', 'Longding', 'Lower Dibang Valley', 'Lower Siang', 'Lower Subansiri', 'Namsai', 'Pakke Kessang', 'Papum Pare', 'Shi Yomi', 'Siang', 'Tawang', 'Tirap', 'Upper Siang', 'Upper Subansiri', 'West Kameng', 'West Siang'];
@@ -99,20 +95,17 @@ var actlstName = "";
 var actFullName = "";
 var actGender = "";
 var actHairColor = "";
-var actDob = "";
-var ageYrs = "";
 var actEyeColor = "";
+var panNo = "";
 var actBloodGroup = "";
 var actWeight = "";
 var actSkinColor = "";
 var actStateName = "";
 var actDistName = "";
 var actCardFullDetails = "";
-var actBreakfast = "";
-var actBnchAddress = [];
 var firstDate1 = "";
 var actAge = "";
-secondDate = new Date(2012, 4, 12);
+var secondDate = new Date(2012, 4, 12);// every year to be increase one year.
 
 /**
  * This method can generate random First name of a person.
@@ -141,7 +134,7 @@ function fullNameGenerator() {
   if (actfirName == "") {
     this.firstNameGenerator();
   }
-   if (actlstName == "") {
+  if (actlstName == "") {
     this.lastNameGenerator();
   }
   var fullName = actfirName + " " + actlstName;
@@ -218,6 +211,28 @@ function passwordGenerator(len) {
 }
 exports.passwordGenerator = passwordGenerator;
 /**
+ * This function have the work of generating person's pan card number(India format)
+ * @returns panNo
+ */
+function panCardId() {
+  var result = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var charactersLength = characters.length;
+  for (var i = 0; i < 3; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  if (actlstName == "") {
+    this.lastNameGenerator();
+
+  }
+  var lastNamefirstChar = actlstName.substring(0, 1);
+  var num = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+  const lastChar = characters.charAt(Math.floor(Math.random() * 26))
+  panNo = result + "P" + lastNamefirstChar + num + lastChar;
+  return panNo;
+}
+exports.panCardId = panCardId;
+/**
  * This method generate a gender for user.
  * @returns gender
  */
@@ -252,10 +267,10 @@ exports.birthDateTimeGenerator = birthDateTimeGenerator;
  */
 function ageCalculation() {
   if (firstDate1 == "") {
-    this.birthDateTimeGenerator();
+    this.birthDateTimeGenerator();  
   }
   var firstDate = new Date(firstDate1);
-  var secondDate = new Date();
+  secondDate = new Date();
   if (firstDate > secondDate)
     [firstDate, secondDate] = [secondDate, firstDate];
 
@@ -422,38 +437,38 @@ function BiologicalData() {
   if (actfirName == "") {
     this.firstNameGenerator();
   }
-   if (actlstName == "") {
+  if (actlstName == "") {
     this.lastNameGenerator();
   }
-   if (actGender == "") {
+  if (actGender == "") {
     this.genderGenerator();
   }
-   if (actHairColor == "") {
+  if (actHairColor == "") {
     this.hairColorGenerator();
   }
- if(firstDate1==""){
+  if (firstDate1 == "") {
     this.birthDateTimeGenerator();
   }
   // else if (actAge == "") {
   //   this.adultAgeGenerator();
   // }
-   if(actAge == ""){
+  if (actAge == "") {
     this.ageCalculation();
   }
   if (actEyeColor == "") {
     this.eyeColorGenerator();
   }
-   if (actBloodGroup == "") {
+  if (actBloodGroup == "") {
     this.bloodGroupGenerator();
   }
-   if (actWeight == "") {
+  if (actWeight == "") {
     this.weightGenerator();
   }
   if (actSkinColor == "") {
     this.skinColorGenerator();
   }
 
-  return [actfirName, actlstName, actGender, actHairColor,firstDate1, actAge, actEyeColor, actBloodGroup, actWeight, actSkinColor];
+  return [actfirName, actlstName, actGender, actHairColor, firstDate1, actAge, actEyeColor, actBloodGroup, actWeight, actSkinColor];
 }
 exports.BiologicalData = BiologicalData;
 
@@ -475,7 +490,7 @@ function distGenerator() {
   if (actStateName == "") {
     this.stateGenerator();
   }
-   if (actStateName == "Andhra Pradesh") {
+  if (actStateName == "Andhra Pradesh") {
     var dis = Math.floor(Math.random() * 13);
     actDistName = stateAndhraDist[dis];
   }
@@ -487,103 +502,103 @@ function distGenerator() {
     var dis = Math.floor(Math.random() * 34);
     actDistName = stateAssamDist[dis];
   }
-   if (actStateName == "Bihar") {
+  if (actStateName == "Bihar") {
     var dis = Math.floor(Math.random() * 38);
     actDistName = stateBiharDist[dis];
   }
-   if (actStateName == "Chhattisgarh") {
+  if (actStateName == "Chhattisgarh") {
     var dis = Math.floor(Math.random() * 28);
     actDistName = stateChhattisgarhDist[dis];
   }
-   if (actStateName == "Goa") {
+  if (actStateName == "Goa") {
     var dis = Math.floor(Math.random() * 2);
     actDistName = stateGoaDist[dis];
   }
-   if (actStateName == "Gujarat") {
+  if (actStateName == "Gujarat") {
     var dis = Math.floor(Math.random() * 33);
     actDistName = stateGujaratDist[dis];
   }
-   if (actStateName == "Haryana") {
+  if (actStateName == "Haryana") {
     var dis = Math.floor(Math.random() * 22);
     actDistName = stateHaryanaDist[dis];
   }
-   if (actStateName == "Himachal Pradesh") {
+  if (actStateName == "Himachal Pradesh") {
     var dis = Math.floor(Math.random() * 12);
     actDistName = stateHimachalDist[dis];
   }
-   if (actStateName == "Jharkhand") {
+  if (actStateName == "Jharkhand") {
     var dis = Math.floor(Math.random() * 24);
     actDistName = stateJharkhandDist[dis];
   }
-   if (actStateName == "Karnataka") {
+  if (actStateName == "Karnataka") {
     var dis = Math.floor(Math.random() * 31);
     actDistName = stateKarnatakaDist[dis];
   }
-   if (actStateName == "Kerala") {
+  if (actStateName == "Kerala") {
     var dis = Math.floor(Math.random() * 14);
     actDistName = stateKeralaDist[dis];
   }
-   if (actStateName == "Madhya Pradesh") {
+  if (actStateName == "Madhya Pradesh") {
     var dis = Math.floor(Math.random() * 52);
     actDistName = stateMadhyaPradeshDist[dis];
   }
-   if (actStateName == "Maharashtra") {
+  if (actStateName == "Maharashtra") {
     var dis = Math.floor(Math.random() * 36);
     actDistName = stateMaharashtraDist[dis];
   }
-   if (actStateName == "Manipur") {
+  if (actStateName == "Manipur") {
     var dis = Math.floor(Math.random() * 16);
     actDistName = stateManipurDist[dis];
   }
-   if (actStateName == "Meghalaya") {
+  if (actStateName == "Meghalaya") {
     var dis = Math.floor(Math.random() * 12);
     actDistName = stateMeghalayaDist[dis];
   }
-   if (actStateName == "Mizoram") {
+  if (actStateName == "Mizoram") {
     var dis = Math.floor(Math.random() * 8);
     actDistName = stateMizoramDist[dis];
   }
-   if (actStateName == "Nagaland") {
+  if (actStateName == "Nagaland") {
     var dis = Math.floor(Math.random() * 11);
     actDistName = stateNagalandDist[dis];
   }
-   if (actStateName == "Odisha") {
+  if (actStateName == "Odisha") {
     var dis = Math.floor(Math.random() * 30);
     actDistName = stateOdishaDist[dis];
   }
-   if (actStateName == "Punjab") {
+  if (actStateName == "Punjab") {
     var dis = Math.floor(Math.random() * 23);
     actDistName = statePunjabDist[dis];
   }
-   if (actStateName == "Rajasthan") {
+  if (actStateName == "Rajasthan") {
     var dis = Math.floor(Math.random() * 33);
     actDistName = stateRajasthanDist[dis];
   }
-   if (actStateName == "Sikkim") {
+  if (actStateName == "Sikkim") {
     var dis = Math.floor(Math.random() * 4);
     actDistName = stateSikkimDist[dis];
   }
-   if (actStateName == "Tamil Nadu") {
+  if (actStateName == "Tamil Nadu") {
     var dis = Math.floor(Math.random() * 38);
     actDistName = stateTamilNaduDist[dis];
   }
-   if (actStateName == "Telangana") {
+  if (actStateName == "Telangana") {
     var dis = Math.floor(Math.random() * 33);
     actDistName = stateTelanganaDist[dis];
   }
-   if (actStateName == "Tripura") {
+  if (actStateName == "Tripura") {
     var dis = Math.floor(Math.random() * 8);
     actDistName = stateTripuraDist[dis];
   }
-   if (actStateName == "Uttar Pradesh") {
+  if (actStateName == "Uttar Pradesh") {
     var dis = Math.floor(Math.random() * 75);
     actDistName = stateUttarPradeshDist[dis];
   }
-   if (actStateName == "Uttarakhand") {
+  if (actStateName == "Uttarakhand") {
     var dis = Math.floor(Math.random() * 13);
     actDistName = stateUttarakhandDist[dis];
   }
-   if (actStateName == "West Bengal") {
+  if (actStateName == "West Bengal") {
     var dis = Math.floor(Math.random() * 23);
     actDistName = stateWestBengalDist[dis];
   }
@@ -603,7 +618,7 @@ function addressGenerator() {
   if (actFullName == "") {
     this.fullNameGenerator();
   }
-   if (actStateName == "") {
+  if (actStateName == "") {
     this.stateGenerator();
   }
   if (actDistName == "") {
@@ -632,19 +647,7 @@ function financialCardGenerator() {
   return actCardFullDetails;
 }
 exports.financialCardGenerator = financialCardGenerator;
-//   bankNameGenerator: function () {
-//     var number = Math.floor(Math.random() * 10);
-//     return PblSctrBnkName[number];
-//   },
-//   // food choices
-//   breakastGenerator: function () {
-//     var bkfst = Math.floor(Math.random() * 155);
-//     return actBreakfast = breakfastName[bkfst];
-//   },
-//   lunchCurryGenerator: function() {
-//     var lnchcry = Math.floor(Math.random() * 26);
-// return actLunchCurryName = lunchCurriesName[lnchcry];
-//   },
+
 /**
  * This function gives you the bunch set of random address data
  * in the form of array set.
@@ -675,29 +678,18 @@ function hugeBiologicalDataGenerator(desiredDataSetNumber) {
     var gen = gender[Math.floor(Math.random() * 3)];
     var hairclr = hairColor[Math.floor(Math.random() * 4)];
     //var age = Math.floor(Math.random() * (99 - 18 + 1)) + 18;
-     var dob =  this.birthDateTimeGenerator();
-      var age = this.ageCalculation();
+    var dob = this.birthDateTimeGenerator();
+    var age = this.ageCalculation();
     var eyeclr = eyeColor[Math.floor(Math.random() * 7)];
     var bldGrp = bloodGroup[Math.floor(Math.random() * 8)];
     var weight = Math.floor(Math.random() * (109 - 35 + 1)) + 35;
     var sknClr = skinColor[Math.floor(Math.random() * 25)];
-    bunchBio.push([fulName, gen, hairclr,dob, age, eyeclr, bldGrp, weight, sknClr]);
+    bunchBio.push([fulName, gen, hairclr, dob, age, eyeclr, bldGrp, weight, sknClr]);
   }
   return bunchBio;
 }
 exports.hugeBiologicalDataGenerator = hugeBiologicalDataGenerator;
-// function superAddress(){
-//   this.hugeAddressGenerator(5);
-//  return actBnchAddress.push(bunchAddress);
-// }
-// exports.superAddress = superAddress;
-// function printNum(){
-//   for (i = 0; i<=60;i++){
-//   console.log(i);
-//   }
-//   return i;
-// }
-// exports.printNum = printNum;
+
 
 
 

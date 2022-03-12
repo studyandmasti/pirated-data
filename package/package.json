@@ -1,6 +1,6 @@
 {
   "name": "pirated-data",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Generating sample user data like name, age, mobilenumber, aadharnumber etc for testing.",
   "main": "index.js",
   "scripts": {

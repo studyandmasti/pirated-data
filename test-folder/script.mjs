@@ -49,8 +49,10 @@ import userData from '../../pirated-data/package/copyed.js';
 //  var bnchAddress = userData.hugeAddressGenerator(50);
 // console.log(bnchAddress);
 
-var bnchBio = userData.hugeBiologicalDataGenerator(10);
-console.log(bnchBio);
+// var bnchBio = userData.hugeBiologicalDataGenerator(10);
+// console.log(bnchBio);
+// var id = userData.panCardId();
+// console.log(id);
 // const d = userData.birthDateTimeGenerator( );
 // console.log(d);
 // const age = userData.ageCalculation();

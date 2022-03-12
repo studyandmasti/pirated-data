@@ -1,38 +1,48 @@
-![Logo](https://github.com/satya319/pirated-data/blob/main/package/Images/pirated-data-logo.png)
-# Pirated data 
-**Install the package**
+
+<p align="center">
+  <a href="#">
+    <img alt="Pirated-Data" src="https://github.com/satya319/pirated-data/blob/main/package/Images/pirated-data-logo.png?raw=true"width="100" height="100" />
+  </a>
+</p>
+<h1 align="center">
+ Pirated-Data
+</h1>
+ 
+**Install the package via npm**
 ```
 npm i pirated-data
 ```
 ## Data provided for the user are 
 
-- First name
-- Last name
-- Age
-- Mobile number
-- Aadhar number( unique identification number)
-- Email-id
-- User Id
-- Password
-- Financial card
-  - Card Number
-  - Card Holder Name
-  - Validthru
-  - Cvv
-- Person's Biological Data
-  - First Name
-  - Last Name
-  - Gender
-  - Hair Color
-  - Age
-  - Eye Color
-  - Blood group
-  - Weight
-  - Body Skin Color
-- Address
-  - Full Name
-  - State Name
-  - District Name
+- [First name](#First-name)
+- [Last name](#Last-name)
+- [Age](#Age)
+- [Mobile number](#Mobile-number)
+- [Aadhar number ( unique identification number)](#Aadhar-number-(unique-identification-number))
+- [Email-id](#Email-id)
+- [User Id](#User-Id)
+- [Password](#Password)
+- [PanCard ID](#PanCard-ID)
+- [Financial card](#Financial-card)
+  - [Card Number](#Card-Number)
+  - [Card Holder Name](#Card-Holder-Name)
+  - [Validthru](#Validthru)
+  - [Cvv](#Cvv)
+- [Person's Biological Data](#Person's-Biological-Data)
+  - [First name](#First-name)
+  - [Last name](#Last-name)
+  - [Gender](#Gender)
+  - [Hair Color](#Hair-Color)
+  - [Date of birth](#Date-of-birth)
+  - [Age](#Age)
+  - [Eye Color](#Eye-Color)
+  - [Blood group](#Blood-group)
+  - [Weight](#Weight)
+  - [Body Skin Color](#Body-Skin-Color)
+- [Address](#Address)
+  - [Full Name](#Full-Name)
+  - [State Name](#State-Name)
+  - [District Name](#District-Name)
 
 ### To use the package's individual function
 -----------------------------------------------
@@ -42,7 +52,7 @@ const userData = require('pirated-data');
 var startname = userData.firstNameGenerator();
 
 
-// For getting last name 
+/* For getting last name */
 const userData = require('pirated-data');
 var lastName =userData.lastNameGenerator();
 
@@ -89,6 +99,10 @@ It will give you the alphanumeric
 const userData = require('pirated-data');
 var pwd = userData.password(10);
 
+/*For getting pancard number */
+var id = userData.panCardId();
+console.log(id);
+
 /* For generating Gendor of an user */
 const userData = require('pirated-data');
  var gender = userData.genderGenerator();
@@ -104,8 +118,22 @@ const userData = require('pirated-data');
 
 ```
 ### Pirated-Data also supports generate sets of data
-- Address
-- Biological Details.
+- [Address](#Address)
+  - [Full Name](#Full-Name)
+  - [State Name (India)](#State-Name-(-India-))
+  - [District Name (India)](#District-Name-(-India-))
+- [Biological Details](#Biological-Details)
+  - [Full name](#Full-name)
+  - [Gender](#Gender)
+  - [Hair Color](#Hair-Color)
+  - [Date of birth](#Date-of-birth)
+  - [Age](#Age)
+  - [Eye Color](#Eye-Color)
+  - [Blood group](#Blood-group)
+  - [Weight](#Weight)
+  - [Body Skin Color](#Body-Skin-Color)
+
+
 
 To generate biological details and address use the below functions
 ```
@@ -116,6 +144,19 @@ const userData = require('pirated-data');
 /* To generate Address of an user */
 const userData = require('pirated-data');
 var address = userData.addressGenerator();
+
+/* To generate huge set of biological data */
+const userData = require('pirated-data');
+const desirednumber = 10;
+var bnchBio = userData.hugeBiologicalDataGenerator(desirednumber);
+console.log(bnchBio);
+It will generate the 10 sets of user data.
+
+/* To generate huge set of Address data */
+const userData = require('pirated-data');
+const desirednumber = 10;
+var bnchAddress = userData.hugeAddressGenerator(desirednumber);
+console.log(bnchAddress);
 ```
 ## Need More feature
 _________________________________
