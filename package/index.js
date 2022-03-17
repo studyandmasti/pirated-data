@@ -52,13 +52,85 @@ var firstMaleName = ['Hari', 'sam', 'Mukund', 'Nabaghan', 'Abhishek', 'Suresh', 
   'Shripal', 'Shubham', 'Shyam', 'Shyamlal', 'Shyamveer', 'Sidharath', 'Sivam', 'Somnath', 'Sonu',
   'Subhakar', 'Subhas', 'Subhash', 'Sudhansu', 'Sudhir', 'Suhail', 'Sujeet'
 ];
-var title = ['Sahu', 'Behera', 'Sahoo', 'Nayak', 'Dash', 'Das', 'Pati', 'Pattanayak', 'Muduli', 'Parida', 'Samantaray', 'Mallick', 'Malick', 'Barik', 'Barika'];
+var title = [ "Sahu", "Behera", "Nayak", "Das", "Pradhan", "Naik", "Majhi", "Jena", "Malik",
+ "Swain", "Patra", "Barik", "Mohanty", "Raut", "Bhoi", "Panda", "Sahoo", "Sethy", "Dei",
+  "Biswal", "Singh", "Parida", "Munda", "Mahanta", "Mahapatra", "Samal", "Mishra", "Maharana",
+  "Rana", "Dash", "Bag", "Dehuri", "Padhan", "Meher", "Gaud", "Pradhana", "Bibi", "Muduli", "Harijan", 
+  "Shabar", "Sethi", "Jani", "Nag", "Mandal", "Murmu", "Patel", "Rout", "Mallick", "Gauda", "Bhue",
+  "Kisan", "Nahak", "Giri", "Pattnayak", "Panigrahi", "Senapati", "Padhi", "Khan", "Bhatara", "Bariha",
+  "Dalei", "Bewa", "Lenka", "Bhatra", "Bhuyan", "Mahakud", "Dalai", "Oram", "Ganda", "Suna", "Ray", "Tudu",
+  "Gouda", "Pujari", "Tripathi", "Simha", "Ojha", "Kar", "Kumbhar", "Nath", "Nanda", "Sa", "Rath", "Seth",
+  "Mohanta", "Dhal", "Mahananda", "Mahalik", "Marndi", "Soren", "Palei", "Baral", "Digal", "Hemrum",
+  "Prushti", "Tandi", "Pati", "Bagha", "Dharua", "Khatua", "Bindhani", "Raul", "Pal", "Bagartti", "Kahanra",
+  "Putel", "Bisoyi", "Sabar", "Kandi", "Mohapatra", "Shatapathi", "Dakua", "Samantaray", "Khuntia", "Mallik",
+  "Santa", "Mirdha", "Khara", "Acharya", "Bisoi", "Begum", "Dip", "Mali", "Pani", "Rao", "Sing", "Gochhayat",
+  "Guru", "Agrawal", "Hansdah", "Bal", "Chowdhury", "Khatun", "Hembram", "Pande", "Bisi", "Chhatria", "Sharma",
+  "Debi", "Khadia", "Hati", "Dora", "Rautray", "Ghadei", "Mahakur", "Kujur", "Ekka", "Lakra", "Podh", "Mukhi",
+  "Khil", "Kumar", "Hantal", "Tarai", "Dehury", "Gahir", "Rait", "Dey", "Saren", "Khamari", "Pattnaik", "Pangi",
+  "Ho", "Jal", "Banachhor", "Gamanga", "Alli", "Hota", "Sunani", "Hansa", "Pallai", "Sutar", "Sahani", "Naek",
+  "Badatya", "Saha", "Khilar", "Dalabehera", "Dandasena", "Paik", "Pujhari", "Pradhani", "Redi", "Pattanayak",
+  "Purtti", "Gond", "Nial", "Bhol", "Mahanti", "Subudhi", "Shadangi", "Biswas", "Madakami", "Kisku", "Paraja",
+  "Gadanayak", "Kuanra", "Tripathy", "Barla", "Chanda", "Ghosh", "Bhanja", "Barad", "Rohidas", "Thakur", "Mangaraj",
+  "Gadaba", "Chalan", "Datta", "Marandi", "Kalo", "Gupta", "Hansda", "Goud", "Mahakul", "Jhankar", "Ghadai",
+  "Beura", "Minz", "Juanga", "Bhumia", "Paikaray", "Sarakar", "Prusty", "Sasamal", "Lohar", "Minja", "Misra",
+  "Puhan", "Tanti", "Bagh", "Satanami", "Amanatya", "Thapa", "Lakada", "Behura", "Kadraka", "Budek", "Deo",
+  "Kamar", "Moharana", "Kishan", "Dhurua", "Lugun", "Samanta", "Sandh", "Mahanandia", "Kanhar", "Gopal",
+  "Beshra", "Badaik", "Luha", "Prasad", "Tirkey", "Tirki", "Mundari", "Bibhar", "Chandan", "Padiami",
+  "Bhutia", "Sabat", "Bastia", "Bhoe", "Jhodia", "Raita", "Jagat", "Malla", "Chhatar", "Mahankud", "Baske", "Kata",
+  "Badhei", "Danasana", "Mahali", "Satapathy", "Kaanra", "Madi", "Toppo", "Choudhury", "Kharsel", "Bej", "Raj",
+  "Durga", "Nandi", "Kanda", "Sisa", "Deheri", "Karmi", "Sen", "Maiti", "Hikaka", "Bishoyi", "Karan", "Purohit",
+  "Tappo", "Samad", "Tiria", "Mahar", "Shandh", "Dandapat", "Dalapati", "Pattanaik", "Rama", "Sagar", "Danga",
+  "Pingua", "Bhatta", "Kerketta", "Muni", "Kalar", "Mahanty", "Palai", "Debata", "Martha", "Devi", "Tarei",
+  "Begam", "Set", "Adhikari", "Agrawalla", "Mantri", "Karnna", "Hial", "Bhati", "Reddy", "Mandangi", "Bhukta",
+  "Dhir", "Chhura", "Bidika", "Dungdung", "Parija", "Kabasi", "Kabi", "Mahammad", "Sai", "Tete", "Chatar",
+  "Mahala", "Dungadunga", "Durua", "Kumura", "Kulu", "Badi", "Gagarai", "Baliyarasinh", "Hasada", "Mahana",
+  "Karua", "Penthei", "Jain", "Mahakhud", "Khatei", "Parichha", "Haladar", "Bemal", "Birua", "Kerketa",
+  "Sarangi", "Disari", "Samarath", "Punji", "Bachha", "Lima", "Bhumij", "Huika", "Roul", "Gadatia", "Amat",
+  "Takri", "Bishi", "Paridaa", "Keraketa", "Saura", "Patro", "Tandia", "Samantara", "Thela", "Sial", "Polei",
+  "Surin", "Si", "Padhiari", "Polai", "Pod", "Jayapuria", "Bai", "Pasayat", "Behuria", "Harapal", "Bhakta",
+  "Pramanik", "Tadingi", "Bera", "Kamila", "Dwibedi", "Khanda", "Karji", "Purty", "Achari", "Parmanik", "Haripal",
+  "Kandulana", "Kalet", "Chinda", "Harichandan", "Jagadala", "Bhainsa", "Prusti", "Bihari", "Patnaik", "Tapno", "Golari",
+  "Sundaray", "Manahira", "Yadab", "Praharaj", "Jali", "Chhotaray", "Kundu", "Bhokta", "Jojo", "Kharasel", "Kumari",
+  "Ghibhela", "Pandit", "Ranasingh", "Mistri", "Gochhaet", "Alam", "Mahato", "Matari", "Jana", "Sinku", "Brahma",
+  "Gardia", "Bage", "Bharati", "Taria", "Pahan", "Hansadah", "Bano", "Mahunta", "Padhy", "Randhari", "Routray", "Amanta",
+  "Deep", "Khandei", "Kandagari", "Kathar", "Guntha", "Ketaki", "Lahajal", "Nisa", "Miniaka", "Parabhue", "Minyaka",
+  "Kunda", "Khandual", "Kindo", "Hembrum", "Palaka", "Kahanr", "Chandi", "Halaba", "Krisani", "Tapo", "Puta", "Buda",
+  "Bada", "Sagaria", "Chhatoi", "Gudia", "Baskey", "Negi", "Thanapati", "Sin", "Beg", "Lakshmi", "Saraph", "Gadatya",
+  "Sika", "Sarddar", "Luhura", "Patamajhi", "Panaka", "Madhei", "Bariki", "Mahalinga", "Soreng", "Babu", "Saunta",
+  "Raju", "Gochhi", "Bishoi", "Choudhuri", "Dhangadamajhi", "Basantia", "Rajahansa", "Dibya", "Sodi", "Shrichandan",
+  "Samantaraya", "Tanty", "Champia", "Bhaisal", "Bentakar", "Manna", "Kirsani", "Kudei", "Badajena", "Kalata", "Banara",
+  "Parua", "Himirika", "Khemundu", "Danta", "Gantayat", "Josi", "Karuan", "Satapathi", "Sidar", "Kuanr", "Shankhua",
+  "Dutta", "Kullu", "Eka", "Luhar", "Bud", "Khura", "Baghar", "Meleka", "Khosala", "Muli", "Kuladip", "Gahan", "Apat",
+  "Pandey", "Ram", "Adabar", "Pothal", "Bharasagar", "Dikshit", "Sarenga", "Galari", "Sardar", "Gop", "Raika", "Ganta",
+  "Kaibartta", "Kaudi", "Deuri", "Bagar", "Banua", "Bhadra", "Kanta", "Keut", "Shadhangi", "Jadab", "Ksheti", "Bandichhor",
+  "Balabantaray", "Tiwari", "Mahat", "Sathua", "Pratihari", "Lohara", "Bardhan", "Xalxo", "Praska", "Bairagi", "Dila",
+  "Husen", "Saraka", "Kaur", "Dhibar", "Dixit", "Mandinga", "Mandingi", "Gamango", "Saradar", "Paharia", "Hernna",
+  "Tigga", "Bar", "Pagal", "Dhar", "Mandi", "Neti", "Sau", "Padhihari", "Bala", "Patri", "Khalakho", "Dhrua", "Barua",
+  "Pruseth", "Badarait", "Yadav", "Bhujabal", "Selama", "Mohakud", "Manika", "Yena", "Pidikaka", "Sukla", "Bagarti", "Chakra",
+  "Hosen", "Banka", "Kalasae", "Jued", "Uddin", "Budhia", "Khatoi", "Raya", "Madkami", "Debanath", "Agarwal", "Topno", "Pandab",
+  "Hans", "Shandha", "Barge", "Upadhyay", "Kabat", "Baidya", "Parabhoe", "Sith", "Jha", "Benia", "Badara", "Sinha",
+  "Sihna", "Pasaet", "Parabhoi", "Champati", "Laguri", "Gemel", "Bhainsal", "Chhanda", "Makar", "Xess", "Adha", "Besra",
+  "Chhuria", "Kalandi", "Parwin", "Dandia", "Manasinh", "Kanungoo", "Burudi", "Bahadur", "Sarap", "Santara", "Bagal",
+  "Madhi", "Garada", "Ansari", "Nachika", "Khakha", "Garadia", "Mitra", "Sabitri", "Bari", "Chakrabarty", "Dangua",
+  "Kandulna", "Dwari", "Bir", "Dhada", "Duria", "Bahidar", "Parbati", "Rajak", "Chowhan", "Kheti", "Tunga", "Karakaria",
+  "Kido", "Khila", "Paital", "Pahi", "Ghibela", "Burma", "Khatoon", "Raheman", "Sundara", "Penthoi", "Mahal", "Sandha",
+  "Marei", "Rauta", "Pattayat", "Karjee", "Muna", "Juadi", "Pidika", "Majumdar", "Jamuda", "Kulesika", "Pinga", "Jati",
+  "Panigrahy", "Patika", "Sendh", "Rautaraya", "Mahabhoi", "Kampa", "Marnni", "Dalua", "Parween", "Lahar", "Deogam",
+  "Ranabida", "Karmakar", "Sagria", "Badra", "Besan", "Soni", "Ghasi", "Ali", "Urma", "Singha", "Khosla", "Bhosagar",
+  "Saraswati", "Karna", "Khes", "Mugri", "Ranajit", "Jethi", "Agasti", "Shatapathy", "Soy", "Aehmad", "Bara", "Bishayi", "Bishai", "Goswami",
+  "Mashra", "Mahankuda", "Parimanik", "Karali", "Pandi", "Bhengra", "Beriha", "Rautaray", "Dal", "Kanungo", "Puala", "Bhagat", "Perei",
+  "Baliarasinh", "Pan", "Thatoi", "Urlaka", "Baa", "Karyi", "Dhali", "Baitharu", "Samantasinhar", "Khanam", "Muthamajhi", "Bandichhod",
+  "Nathasharma", "Mahamad", "Bahalia", "Hansada", "Jayasinh", "Jerai", "Roy", "Shagadia", "Muria", "Gain", "Barman", "Kalia", "Pushti",
+  "Badamundi", "Kusulia", "Lahara", "Sarkar", "Biswakarma", "Baliarasin", "Kandh", "Sah", "Chaudhuri", "Kiro", "Misal", "Peda", 
+  "Sirika", "Jagadeb", "Guin", "Sidu", "Behara", "Garia", "Sana", "Modi", "Bilunga", "Satpathy", "Suar", "Adajuad", "Sikaka", "Suren", "Matia",
+];
 var emlDomain = ['gmail.com', 'yahoo.com', 'hotmail.com', 'rediffmail.com', 'mns.com', 'github.com', 'bandu.com', 'baidu.com', 'aol.com', 'comcast.net'];
 var gender = ['Male', 'Female', 'TransGender'];
 var hairColor = ['Black', 'Brown', 'Red', 'Blond'];
 var skinColor = ['Ivory', 'Beige', 'Alabaster', 'Honey', 'Carotenoid', 'Tan', 'Caramel', 'Bronze', 'Mahogany', 'Chestnut', 'Buff', 'Peaches', 'Umber', 'Praline', 'Espresso Brown', 'Porcelain', 'Hickory', 'Mustard', 'Sable', 'Almond', 'Bisque', 'Teak', 'Cacao', 'Pecan', 'Saddle Brown'];
 var bloodGroup = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
 var eyeColor = ['Brown', 'Blue', 'Hazel', 'Amber', 'Green', 'Gray', 'Red'];
+// var iFscCode = [' BARB0',''];
 var stateName = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
 var stateAndhraDist = ['Anantapuram', 'Chittoor', 'East Godavari', 'Guntur', 'YSR Kadapa', 'Krishna', 'Kurnool', 'Prakasam', 'Sri Potti Sriramulu Nellore', 'Srikakulam', 'Visakhapatnam', 'Vizianagaram', 'West Godavari'];
 var stateArunachalDist = ['Anjaw', 'Changlang', 'Dibang Valley', 'East Kameng', 'East Siang', 'Kamle', 'Kra Daadi', 'Kurung Kumey', 'Lepa Rada', 'Lohit', 'Longding', 'Lower Dibang Valley', 'Lower Siang', 'Lower Subansiri', 'Namsai', 'Pakke Kessang', 'Papum Pare', 'Shi Yomi', 'Siang', 'Tawang', 'Tirap', 'Upper Siang', 'Upper Subansiri', 'West Kameng', 'West Siang'];
@@ -122,7 +194,7 @@ exports.firstNameGenerator = firstNameGenerator;
  * @returns LastName
  */
 function lastNameGenerator() {
-  var number = Math.floor(Math.random() * 10);
+  var number = Math.floor(Math.random() * 806);
   return actlstName = title[number];
 }
 exports.lastNameGenerator = lastNameGenerator;
@@ -223,12 +295,12 @@ function panCardId() {
   }
   if (actlstName == "") {
     this.lastNameGenerator();
-
+    
   }
-  var lastNamefirstChar = actlstName.substring(0, 1);
+  var lastNamefirstChar= actlstName.substring(0,1);
   var num = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
   const lastChar = characters.charAt(Math.floor(Math.random() * 26))
-  panNo = result + "P" + lastNamefirstChar + num + lastChar;
+  panNo = result +"P"+lastNamefirstChar+num+lastChar;
   return panNo;
 }
 exports.panCardId = panCardId;
@@ -248,9 +320,9 @@ exports.genderGenerator = genderGenerator;
  * @returns 
  */
 function birthDateTimeGenerator() {
-  start = new Date("1935-01-01");
-  end = new Date(2002, 0, 1);
-  dob = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  const start = new Date("1935-01-01");
+  const end = new Date(2002, 0, 1);
+  const dob = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   const r = dob.toISOString().slice(0, 10);
   const firstDate2 = r.split("-");
   const yr = firstDate2[0];
@@ -267,7 +339,7 @@ exports.birthDateTimeGenerator = birthDateTimeGenerator;
  */
 function ageCalculation() {
   if (firstDate1 == "") {
-    this.birthDateTimeGenerator();  
+    this.birthDateTimeGenerator();
   }
   var firstDate = new Date(firstDate1);
   secondDate = new Date();
@@ -689,6 +761,7 @@ function hugeBiologicalDataGenerator(desiredDataSetNumber) {
   return bunchBio;
 }
 exports.hugeBiologicalDataGenerator = hugeBiologicalDataGenerator;
+
 
 
 
