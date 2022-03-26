@@ -7,7 +7,6 @@
 <h1 align="center">
  Pirated-Data
 </h1>
-![CodeFactor](https://www.codefactor.io/repository/github/satya319/pirated-data/badge/main)
  
 **Install the package via npm**
 ```
