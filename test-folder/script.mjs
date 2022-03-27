@@ -1,4 +1,4 @@
-import userData from '../../pirated-data/package/copyed.js';
+import userData from '../../pirated-data/package/index.js';
 // const userData = require('pirated-data');
 // var result = userData.add(4,5)
 // console.log(result);
