@@ -1,7 +1,7 @@
 /*!
  * @author Satyajit319 <satyajit319@gmail.com> * date 03/03/2022
  */
-const { firstMaleName, title, emlDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateAndhraDist, stateArunachalDist, stateAssamDist, stateBiharDist, stateChhattisgarhDist, stateGoaDist, stateGujaratDist, stateHaryanaDist, stateHimachalDist, stateJharkhandDist, stateKarnatakaDist, stateKeralaDist, stateMadhyaPradeshDist, stateMaharashtraDist, stateManipurDist, stateMeghalayaDist, stateMizoramDist, stateNagalandDist, stateOdishaDist, statePunjabDist, stateRajasthanDist, stateSikkimDist, stateTamilNaduDist, stateTelanganaDist, stateTripuraDist, stateUttarPradeshDist, stateUttarakhandDist, stateWestBengalDist } = require('./dataProvider.js');
+const { firstMaleName, title, emlDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateDist,stateList} = require('./dataProvider.js');
 
 var actfirName = "";
 var actlstName = "";
@@ -400,17 +400,13 @@ exports.stateGenerator = stateGenerator;
  * @returns districtName
  */
 function distGenerator() {
-  var stateList={"Andhra Pradesh":13,"Arunachal Pradesh":26,"Assam":34,"Bihar":38,"Chhattisgarh":28,"Goa":2,
-  "Gujarat":33,"Haryana":22,"Himachal Pradesh":12,"Jharkhand":24,"Karnataka":31,"Kerala":14,"Madhya Pradesh":52,
-  "Maharashtra":36,"Manipur":16,"Meghalaya":12,"Mizoram":8,"Nagaland":11,"Odisha":30,"Punjab":23,"Rajasthan":33,
-  "Sikkim":4,"Tamil Nadu":38,"Telangana":33,"Tripura":8,"Uttar Pradesh":75,"Uttarakhand":13, "West Bengal":23}
   
   if (actStateName == "") {
     this.stateGenerator();
   }
   if(actStateName){
     var dis = Math.floor(Math.random() * stateList[actStateName]);
-    actDistName = stateAndhraDist[dis];
+    actDistName = stateDist[actStateName][dis];
   }
   return actDistName;
 }
