@@ -1,7 +1,7 @@
 /*!
  * @author Satyajit319 <satyajit319@gmail.com> * date 03/03/2022
  */
-const { firstMaleName, title, emlDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateAndhraDist, stateArunachalDist, stateAssamDist, stateBiharDist, stateChhattisgarhDist, stateGoaDist, stateGujaratDist, stateHaryanaDist, stateHimachalDist, stateJharkhandDist, stateKarnatakaDist, stateKeralaDist, stateMadhyaPradeshDist, stateMaharashtraDist, stateManipurDist, stateMeghalayaDist, stateMizoramDist, stateNagalandDist, stateOdishaDist, statePunjabDist, stateRajasthanDist, stateSikkimDist, stateTamilNaduDist, stateTelanganaDist, stateTripuraDist, stateUttarPradeshDist, stateUttarakhandDist, stateWestBengalDist } = require('./dataProvider.js');
+const { firstMaleName, title, emlDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateDist,stateList} = require('./dataProvider.js');
 
 var actfirName = "";
 var actlstName = "";
@@ -400,120 +400,13 @@ exports.stateGenerator = stateGenerator;
  * @returns districtName
  */
 function distGenerator() {
+  
   if (actStateName == "") {
     this.stateGenerator();
   }
-  if (actStateName == "Andhra Pradesh") {
-    var dis = Math.floor(Math.random() * 13);
-    actDistName = stateAndhraDist[dis];
-  }
-  if (actStateName == "Arunachal Pradesh") {
-    var dis = Math.floor(Math.random() * 26);
-    actDistName = stateArunachalDist[dis];
-  }
-  if (actStateName == "Assam") {
-    var dis = Math.floor(Math.random() * 34);
-    actDistName = stateAssamDist[dis];
-  }
-  if (actStateName == "Bihar") {
-    var dis = Math.floor(Math.random() * 38);
-    actDistName = stateBiharDist[dis];
-  }
-  if (actStateName == "Chhattisgarh") {
-    var dis = Math.floor(Math.random() * 28);
-    actDistName = stateChhattisgarhDist[dis];
-  }
-  if (actStateName == "Goa") {
-    var dis = Math.floor(Math.random() * 2);
-    actDistName = stateGoaDist[dis];
-  }
-  if (actStateName == "Gujarat") {
-    var dis = Math.floor(Math.random() * 33);
-    actDistName = stateGujaratDist[dis];
-  }
-  if (actStateName == "Haryana") {
-    var dis = Math.floor(Math.random() * 22);
-    actDistName = stateHaryanaDist[dis];
-  }
-  if (actStateName == "Himachal Pradesh") {
-    var dis = Math.floor(Math.random() * 12);
-    actDistName = stateHimachalDist[dis];
-  }
-  if (actStateName == "Jharkhand") {
-    var dis = Math.floor(Math.random() * 24);
-    actDistName = stateJharkhandDist[dis];
-  }
-  if (actStateName == "Karnataka") {
-    var dis = Math.floor(Math.random() * 31);
-    actDistName = stateKarnatakaDist[dis];
-  }
-  if (actStateName == "Kerala") {
-    var dis = Math.floor(Math.random() * 14);
-    actDistName = stateKeralaDist[dis];
-  }
-  if (actStateName == "Madhya Pradesh") {
-    var dis = Math.floor(Math.random() * 52);
-    actDistName = stateMadhyaPradeshDist[dis];
-  }
-  if (actStateName == "Maharashtra") {
-    var dis = Math.floor(Math.random() * 36);
-    actDistName = stateMaharashtraDist[dis];
-  }
-  if (actStateName == "Manipur") {
-    var dis = Math.floor(Math.random() * 16);
-    actDistName = stateManipurDist[dis];
-  }
-  if (actStateName == "Meghalaya") {
-    var dis = Math.floor(Math.random() * 12);
-    actDistName = stateMeghalayaDist[dis];
-  }
-  if (actStateName == "Mizoram") {
-    var dis = Math.floor(Math.random() * 8);
-    actDistName = stateMizoramDist[dis];
-  }
-  if (actStateName == "Nagaland") {
-    var dis = Math.floor(Math.random() * 11);
-    actDistName = stateNagalandDist[dis];
-  }
-  if (actStateName == "Odisha") {
-    var dis = Math.floor(Math.random() * 30);
-    actDistName = stateOdishaDist[dis];
-  }
-  if (actStateName == "Punjab") {
-    var dis = Math.floor(Math.random() * 23);
-    actDistName = statePunjabDist[dis];
-  }
-  if (actStateName == "Rajasthan") {
-    var dis = Math.floor(Math.random() * 33);
-    actDistName = stateRajasthanDist[dis];
-  }
-  if (actStateName == "Sikkim") {
-    var dis = Math.floor(Math.random() * 4);
-    actDistName = stateSikkimDist[dis];
-  }
-  if (actStateName == "Tamil Nadu") {
-    var dis = Math.floor(Math.random() * 38);
-    actDistName = stateTamilNaduDist[dis];
-  }
-  if (actStateName == "Telangana") {
-    var dis = Math.floor(Math.random() * 33);
-    actDistName = stateTelanganaDist[dis];
-  }
-  if (actStateName == "Tripura") {
-    var dis = Math.floor(Math.random() * 8);
-    actDistName = stateTripuraDist[dis];
-  }
-  if (actStateName == "Uttar Pradesh") {
-    var dis = Math.floor(Math.random() * 75);
-    actDistName = stateUttarPradeshDist[dis];
-  }
-  if (actStateName == "Uttarakhand") {
-    var dis = Math.floor(Math.random() * 13);
-    actDistName = stateUttarakhandDist[dis];
-  }
-  if (actStateName == "West Bengal") {
-    var dis = Math.floor(Math.random() * 23);
-    actDistName = stateWestBengalDist[dis];
+  if(actStateName){
+    var dis = Math.floor(Math.random() * stateList[actStateName]);
+    actDistName = stateDist[actStateName][dis];
   }
   return actDistName;
 }
