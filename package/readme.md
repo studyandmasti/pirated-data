@@ -7,6 +7,7 @@
 <h1 align="center">
  Pirated-Data
 </h1>
+
  ![CodeFactor](https://www.codefactor.io/repository/github/satya319/pirated-data/badge/main)
  
 **Install the package via npm**
@@ -24,6 +25,8 @@ npm i pirated-data
 - [User Id](#User-Id)
 - [Password](#Password)
 - [PanCard ID](#PanCard-ID)
+- [Passport Number](#Passport-Number)
+- [Driving license number](#Driving-license-number)
 - [Financial card](#Financial-card)
   - [Card Number](#Card-Number)
   - [Card Holder Name](#Card-Holder-Name)
@@ -78,9 +81,6 @@ var card = userData.financialCardGenerator();
 const userData = require('pirated-data');
  var bnkName = userData.bankNameGenerator();
 
-
-
-
 // For getting AadharCard number
 const userData = require('pirated-data');
 var aadhar = userData.aadharNumberGenerator();
@@ -103,6 +103,14 @@ var pwd = userData.password(10);
 /*For getting pancard number */
 var id = userData.panCardId();
 console.log(id);
+
+/*For getting passport number */
+ const passNum = userData.passportNumber();
+ console.log(passNum);
+
+/*For getting DL number */
+const dl = userData.drivinglicenseGenerator();
+console.log(dl);
 
 /* For generating Gendor of an user */
 const userData = require('pirated-data');

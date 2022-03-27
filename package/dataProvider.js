@@ -162,6 +162,16 @@ var stateDist ={'Andhra Pradesh': ['Anantapuram', 'Chittoor', 'East Godavari', '
 var stateList={"Andhra Pradesh":13,"Arunachal Pradesh":26,"Assam":34,"Bihar":38,"Chhattisgarh":28,"Goa":2,
 "Gujarat":33,"Haryana":22,"Himachal Pradesh":12,"Jharkhand":24,"Karnataka":31,"Kerala":14,"Madhya Pradesh":52,
 "Maharashtra":36,"Manipur":16,"Meghalaya":12,"Mizoram":8,"Nagaland":11,"Odisha":30,"Punjab":23,"Rajasthan":33,
-"Sikkim":4,"Tamil Nadu":38,"Telangana":33,"Tripura":8,"Uttar Pradesh":75,"Uttarakhand":13, "West Bengal":23}
+"Sikkim":4,"Tamil Nadu":38,"Telangana":33,"Tripura":8,"Uttar Pradesh":75,"Uttarakhand":13, "West Bengal":23};
+
+var stateRtoCode={"Andhra Pradesh":"AP","Arunachal Pradesh":"AR","Assam":"AS","Bihar":"BR","Chhattisgarh":"CG","Goa":"GA",
+"Gujarat":"GJ","Haryana":"HR","Himachal Pradesh":"HP","Jharkhand":"JH","Karnataka":"KA","Kerala":"KL","Madhya Pradesh":"MP",
+"Maharashtra":"MH","Manipur":"MN","Meghalaya":"ML","Mizoram":"MZ","Nagaland":"NL","Odisha":"OD","Punjab":"PN","Rajasthan":"RJ",
+"Sikkim":"SK","Tamil Nadu":"TN","Telangana":"TS","Tripura":"TR","Uttar Pradesh":"UP","Uttarakhand":"UK", "West Bengal":"WB"};
+
+var stateRtoCount={"Andhra Pradesh":38,"Arunachal Pradesh":16,"Assam":34,"Bihar":11,"Chhattisgarh":30,"Goa":6,
+"Gujarat":38,"Haryana":98,"Himachal Pradesh":80,"Jharkhand":24,"Karnataka":71,"Kerala":86,"Madhya Pradesh":54,
+"Maharashtra":50,"Manipur":8,"Meghalaya":14,"Mizoram":9,"Nagaland":8,"Odisha":35,"Punjab":99,"Rajasthan":53,
+"Sikkim":8,"Tamil Nadu":96,"Telangana":36,"Tripura":8,"Uttar Pradesh":96,"Uttarakhand":19, "West Bengal":78};
 module.exports = { firstMaleName, title,emlDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, 
-  stateName, stateDist ,stateList};
+  stateName, stateDist ,stateList, stateRtoCode, stateRtoCount};
