@@ -1,4 +1,4 @@
-/*!
+m/*!
  * @author Satyajit319 <satyajit319@gmail.com> * date 03/03/2022
  */
 const { firstMaleName, title, emlDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateDist,
