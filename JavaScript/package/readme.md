@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="#">
-    <img alt="Pirated-Data" src="https://github.com/satya319/pirated-data/blob/main/package/Images/pirated-data-logo.png?raw=true"width="100" height="100" />
+    <img alt="Pirated-Data" src="https://github.com/satya319/pirated-data/blob/main/JavaScript/package/Images/pirated-data-logo.png?raw=true"width="100" height="100" />
   </a>
 </p>
 <h1 align="center">
