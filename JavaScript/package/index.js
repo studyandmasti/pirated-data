@@ -465,8 +465,8 @@ exports.drivinglicenseGenerator = drivinglicenseGenerator;
     var bunchAddress = [];
     for (let i = 0; i < desiredDataSetNumber; i++) {
       actFullName = firstMaleName[Math.floor(Math.random() * 469)] + ' ' + title[Math.floor(Math.random() * 10)];
-      state = this.stateGenerator();
-      dist = this.distGenerator();
+      var state = this.stateGenerator();
+      var dist = this.distGenerator();
       bunchAddress.push([actFullName, state, dist]);
     }
     return bunchAddress;

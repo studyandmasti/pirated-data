@@ -1,4 +1,5 @@
-import userData from '../../pirated-data/package/copyed.js';
+import userData from '../package/copyed.js';
+
 // const userData = require('pirated-data');
 // var result = userData.add(4,5)
 // console.log(result);
@@ -34,8 +35,8 @@ import userData from '../../pirated-data/package/copyed.js';
 // console.log(biology);
 // // var bnkName = userData.bankNameGenerator();
 // // console.log("Bank name of user: "+bnkName);
-var state = userData.stateGenerator();
-console.log("State name is: "+state);
+// var state = userData.stateGenerator();
+// console.log("State name is: "+state);
 // var dist = userData.distGenerator();
 // console.log(dist);
 // var address = userData.addressGenerator();
@@ -46,8 +47,8 @@ console.log("State name is: "+state);
 // // console.log(bkfstnme);
 // // var lnchcrynme = userData.lunchCurryGenerator();
 // // console.log(lnchcrynme);
-//  var bnchAddress = userData.hugeAddressGenerator(50);
-// console.log(bnchAddress);
+ var bnchAddress = userData.hugeAddressGenerator(50);
+console.log(bnchAddress);
 
 // var bnchBio = userData.hugeBiologicalDataGenerator(10);
 // console.log(bnchBio);
