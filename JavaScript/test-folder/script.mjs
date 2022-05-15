@@ -17,6 +17,8 @@ import userData from '../package/copyed.js';
 // console.log("Aaadhar number: "+aadhar);
 // var eml = userData.emailIdGenerator();
 // console.log("Email id: "+eml);
+var upi = userData.upiIdGenerator();
+console.log("upi id of the user is: ", upi)
 // var usrId = userData.userIdGenerator();
 // console.log("Userid of user: "+usrId);
 // var pwd = userData.passwordGenerator(10);
@@ -47,8 +49,8 @@ import userData from '../package/copyed.js';
 // // console.log(bkfstnme);
 // // var lnchcrynme = userData.lunchCurryGenerator();
 // // console.log(lnchcrynme);
- var bnchAddress = userData.hugeAddressGenerator(50);
-console.log(bnchAddress);
+// var bnchAddress = userData.hugeAddressGenerator(50);
+// console.log(bnchAddress);
 
 // var bnchBio = userData.hugeBiologicalDataGenerator(10);
 // console.log(bnchBio);
@@ -61,5 +63,5 @@ console.log(bnchAddress);
 
 // const passNum = userData.passportNumber();
 // console.log(passNum);
-const dl = userData.drivinglicenseGenerator();
-console.log(dl);
+// const dl = userData.drivinglicenseGenerator();
+// console.log(dl);
