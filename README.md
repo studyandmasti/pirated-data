@@ -8,7 +8,7 @@
  Pirated-Data
 </h1>
 
- ![CodeFactor](https://www.codefactor.io/repository/github/satya319/pirated-data/badge/main)
+ [![CodeFactor](https://www.codefactor.io/repository/github/studyandmasti/pirated-data/badge)](https://www.codefactor.io/repository/github/studyandmasti/pirated-data)
  
 **Install the package via npm**
 ```
