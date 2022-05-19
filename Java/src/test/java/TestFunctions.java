@@ -1,8 +1,8 @@
-import com.source.FunctionProvider;
+import com.source.PiratedData;
 
-public class TestFunctions extends FunctionProvider {
+public class TestFunctions extends PiratedData {
 public static void main(String[] args) {
-	FunctionProvider fun = new FunctionProvider();
+	PiratedData fun = new PiratedData();
 	String firstName =fun.firstNameGenerator();
 	System.out.println(firstName);
 	
