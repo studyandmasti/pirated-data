@@ -1,31 +1,34 @@
-import com.source.PiratedData;
+import io.github.studyandmasti.PiratedData;
 
 public class TestFunctions extends PiratedData {
 public static void main(String[] args) {
-	PiratedData fun = new PiratedData();
-	String firstName =fun.firstNameGenerator();
+	PiratedData pd = new PiratedData();
+	String firstName =pd.firstNameGenerator();
 	System.out.println(firstName);
 	
-	String lastName = fun.lastNameGenerator();
+	String lastName = pd.lastNameGenerator();
 	System.out.println(lastName);
 	
-	String fullName = fun.fullNameGenerator();
+	String fullName = pd.fullNameGenerator();
 	System.out.println(fullName);
 	
-	long mobno = fun.mobileNumberGenerator();
+	long mobno = pd.mobileNumberGenerator();
 	System.out.println(mobno);
 	
-	long aadhar = fun.aadharNumberGenerator();
+	long aadhar = pd.aadharNumberGenerator();
 	System.out.println(aadhar);
 	
-	String email = fun.emailIdGenerator();
+	String email = pd.emailIdGenerator();
 	System.out.println(email);
 	
-	String userId = fun.userIdGenerator();
+	String userId = pd.userIdGenerator();
 	System.out.println(userId);
 	
-	char[] pass= fun.passwordGenerator(8);
+	char[] pass= pd.passwordGenerator(8);
 	System.out.println(pass);
+	
+	int num = pd.randomNumberGenerator(45);
+	System.out.println(num);
 }
 
 }
