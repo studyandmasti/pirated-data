@@ -12,7 +12,7 @@ let actGender = "";
 let actHairColor = "";
 let actEyeColor = "";
 let panNo = "";
-let passNo = "";
+var passNo = "";
 let actBloodGroup = "";
 let actWeight = "";
 let actSkinColor = "";
@@ -60,16 +60,6 @@ function fullNameGenerator() {
   return actFullName = fullName;
 }
 exports.fullNameGenerator = fullNameGenerator;
-/**
- * This method is for generate random age between (18-99).
- * @returns age
- * @deprecated
- */
-function adultAgeGenerator() {
-  let age = Math.floor(Math.random() * (99 - 18 + 1)) + 18;
-  return ageYrs = age;
-}
-exports.adultAgeGenerator = adultAgeGenerator;
 /**
  * This method is for generate random mobile number
  * @returns MobileNumber
@@ -123,6 +113,7 @@ function userIdGenerator() {
     this.firstNameGenerator();
   }
   let usrIdNum = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+  let userId;
   return userId = actfirName + usrIdNum;
 }
 exports.userIdGenerator = userIdGenerator;
@@ -170,7 +161,7 @@ exports.panCardId = panCardId;
 function passportNumber() {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const charactersLength = characters.length;
-  result = characters.charAt(Math.floor(Math.random() * charactersLength));
+  let result = characters.charAt(Math.floor(Math.random() * charactersLength));
   let num = Math.floor(Math.random() * (999999999 - 100000000 + 1)) + 100000000;
   passNo = result + num;
   return passNo;
@@ -200,6 +191,7 @@ var rtoCode = stateRtoCode[actStateName];
   const yr = Math.floor(Math.random() * (2022 - 1998 + 1)) + 1998;
   const appNo = Math.floor(Math.random() * (8888888 - 1000000 + 1)) + 1000000;
   const dl = rtoCode + rtoNum + yr + appNo;
+  let dlNum;
   return dlNum =  dl;
 }
 exports.drivinglicenseGenerator = drivinglicenseGenerator;
