@@ -2,7 +2,7 @@
  * @author Satyajit319 <satyajit319@gmail.com>
  * date 27/03/2022
  */
-var firstMaleName = ['Hari', 'sam', 'Mukund', 'Nabaghan', 'Abhishek', 'Suresh', 'Santunu', 'Akashya', 'Haribol',
+let firstMaleName = ['Hari', 'sam', 'Mukund', 'Nabaghan', 'Abhishek', 'Suresh', 'Santunu', 'Akashya', 'Haribol',
   'Madhab', 'Balkrushna', 'Aarav', 'Vihaan', 'Vivaan', 'Ananya', 'Diya', 'Advik', 'Kabir', 'Anaya',
   'Aarav', 'Vivaan', 'Aditya', 'Vivaan', 'Vihaan', 'Arjun', 'Vivaan', 'Reyansh', 'Mohammed', 'Sai',
   'Arnav', 'Aayan', 'Krishna', 'Ishaan', 'Shaurya', 'Atharva', 'Advik', 'Pranav', 'Advaith', 'Aaryan',
@@ -51,7 +51,7 @@ var firstMaleName = ['Hari', 'sam', 'Mukund', 'Nabaghan', 'Abhishek', 'Suresh', 
   'Shripal', 'Shubham', 'Shyam', 'Shyamlal', 'Shyamveer', 'Sidharath', 'Sivam', 'Somnath', 'Sonu',
   'Subhakar', 'Subhas', 'Subhash', 'Sudhansu', 'Sudhir', 'Suhail', 'Sujeet'
 ];
-var title = ["Sahu", "Behera", "Nayak", "Das", "Pradhan", "Naik", "Majhi", "Jena", "Malik",
+let title = ["Sahu", "Behera", "Nayak", "Das", "Pradhan", "Naik", "Majhi", "Jena", "Malik",
   "Swain", "Patra", "Barik", "Mohanty", "Raut", "Bhoi", "Panda", "Sahoo", "Sethy", "Dei",
   "Biswal", "Singh", "Parida", "Munda", "Mahanta", "Mahapatra", "Samal", "Mishra", "Maharana",
   "Rana", "Dash", "Bag", "Dehuri", "Padhan", "Meher", "Gaud", "Pradhana", "Bibi", "Muduli", "Harijan",
@@ -123,17 +123,17 @@ var title = ["Sahu", "Behera", "Nayak", "Das", "Pradhan", "Naik", "Majhi", "Jena
   "Badamundi", "Kusulia", "Lahara", "Sarkar", "Biswakarma", "Baliarasin", "Kandh", "Sah", "Chaudhuri", "Kiro", "Misal", "Peda",
   "Sirika", "Jagadeb", "Guin", "Sidu", "Behara", "Garia", "Sana", "Modi", "Bilunga", "Satpathy", "Suar", "Adajuad", "Sikaka", "Suren", "Matia",
 ];
-var emlDomain = ['gmail.com', 'yahoo.com', 'hotmail.com', 'rediffmail.com', 'mns.com', 'github.com', 'bandu.com', 'baidu.com', 'aol.com', 'comcast.net'];
-var upiDomain = ['@BARODAMPAY', '@rbl', '@idbi', '@upi', '@aubank', '@axisbank', '@bandhan', '@dlb', '@indus', '@kbl', '@federal', '@sbi', '@uco',
+let emlDomain = ['gmail.com', 'yahoo.com', 'hotmail.com', 'rediffmail.com', 'mns.com', 'github.com', 'bandu.com', 'baidu.com', 'aol.com', 'comcast.net'];
+let upiDomain = ['@BARODAMPAY', '@rbl', '@idbi', '@upi', '@aubank', '@axisbank', '@bandhan', '@dlb', '@indus', '@kbl', '@federal', '@sbi', '@uco',
   '@yesbank', '@citi', '@citigold', '@dlb', '@dbs', '@freecharge', '@okhdfcbank', '@okaxis', '@oksbi', '@okicici', '@hsbc',
   '@idbi', '@icici', '@indianbank', '@allbank', '@kotak', '@ikwik', '@paytm', '@ybl', '@axl', '@ibl', '@sib']
-var gender = ['Male', 'Female', 'TransGender'];
-var hairColor = ['Black', 'Brown', 'Red', 'Blond'];
-var skinColor = ['Ivory', 'Beige', 'Alabaster', 'Honey', 'Carotenoid', 'Tan', 'Caramel', 'Bronze', 'Mahogany', 'Chestnut', 'Buff', 'Peaches', 'Umber', 'Praline', 'Espresso Brown', 'Porcelain', 'Hickory', 'Mustard', 'Sable', 'Almond', 'Bisque', 'Teak', 'Cacao', 'Pecan', 'Saddle Brown'];
-var bloodGroup = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
-var eyeColor = ['Brown', 'Blue', 'Hazel', 'Amber', 'Green', 'Gray', 'Red'];
-var stateName = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
-var stateDist = {
+let gender = ['Male', 'Female', 'TransGender'];
+let hairColor = ['Black', 'Brown', 'Red', 'Blond'];
+let skinColor = ['Ivory', 'Beige', 'Alabaster', 'Honey', 'Carotenoid', 'Tan', 'Caramel', 'Bronze', 'Mahogany', 'Chestnut', 'Buff', 'Peaches', 'Umber', 'Praline', 'Espresso Brown', 'Porcelain', 'Hickory', 'Mustard', 'Sable', 'Almond', 'Bisque', 'Teak', 'Cacao', 'Pecan', 'Saddle Brown'];
+let bloodGroup = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
+let eyeColor = ['Brown', 'Blue', 'Hazel', 'Amber', 'Green', 'Gray', 'Red'];
+let stateName = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
+let stateDist = {
   'Andhra Pradesh': ['Anantapuram', 'Chittoor', 'East Godavari', 'Guntur', 'YSR Kadapa', 'Krishna', 'Kurnool', 'Prakasam', 'Sri Potti Sriramulu Nellore', 'Srikakulam', 'Visakhapatnam', 'Vizianagaram', 'West Godavari'],
   'Arunachal Pradesh': ['Anjaw', 'Changlang', 'Dibang Valley', 'East Kameng', 'East Siang', 'Kamle', 'Kra Daadi', 'Kurung Kumey', 'Lepa Rada', 'Lohit', 'Longding', 'Lower Dibang Valley', 'Lower Siang', 'Lower Subansiri', 'Namsai', 'Pakke Kessang', 'Papum Pare', 'Shi Yomi', 'Siang', 'Tawang', 'Tirap', 'Upper Siang', 'Upper Subansiri', 'West Kameng', 'West Siang'],
   'Assam': ['Baksa', 'Barpeta', 'Biswanath', 'Bongaigaon', 'Cachar', 'Charaideo', 'Chirang', 'Darrang', 'Dhemaji', 'Dhubri', 'Dibrugarh', 'Dima Hasao', 'Goalpara', 'Golaghat', 'Hailakandi', 'Hojai', 'Jorhat', 'Kamrup', 'Kamrup Metropolitan', 'Karbi Anglong', 'Karimganj', 'Kokrajhar', 'Lakhimpur', 'Majuli', 'Morigaon', 'Nagaon', 'Nalbari', 'Sivasagar', 'South Salmara Mankachar', 'Sonitpur', 'Tinsukia', 'Udalguri', 'West Karbi Anglong'],
@@ -163,21 +163,21 @@ var stateDist = {
   'Uttarakhand': ['Almora', 'Bageshwar', 'Chamoli', 'Champawat', 'Dehradun', 'Haridwar', 'Nainital', 'Pauri Garhwal', 'Pithoragarh', 'Rudraprayag', 'Tehri Garhwal', 'Udham Singh Nagar', 'Uttarkashi'],
   'West Bengal': ['Alipurduar', 'Bankura', 'Birbhum', 'Cooch Behar', 'Dakshin Dinajpur (South Dinajpur)', 'Darjeeling', 'Hooghly', 'Howrah', 'Jalpaiguri', 'Jhargram', 'Kalimpong', 'Kolkata', 'Malda', 'Murshidabad', 'Nadia', 'North 24 Parganas', 'Paschim Medinipur (West Medinipur)', 'Paschim (West) Burdwan (Bardhaman)', 'Purba Burdwan (Bardhaman)', 'Purba Medinipur (East Medinipur)', 'Purulia', 'South 24 Parganas', 'Uttar Dinajpur (North Dinajpur)'],
 };
-var stateList = {
+let stateList = {
   "Andhra Pradesh": 13, "Arunachal Pradesh": 26, "Assam": 34, "Bihar": 38, "Chhattisgarh": 28, "Goa": 2,
   "Gujarat": 33, "Haryana": 22, "Himachal Pradesh": 12, "Jharkhand": 24, "Karnataka": 31, "Kerala": 14, "Madhya Pradesh": 52,
   "Maharashtra": 36, "Manipur": 16, "Meghalaya": 12, "Mizoram": 8, "Nagaland": 11, "Odisha": 30, "Punjab": 23, "Rajasthan": 33,
   "Sikkim": 4, "Tamil Nadu": 38, "Telangana": 33, "Tripura": 8, "Uttar Pradesh": 75, "Uttarakhand": 13, "West Bengal": 23
 };
 
-var stateRtoCode = {
+let stateRtoCode = {
   "Andhra Pradesh": "AP", "Arunachal Pradesh": "AR", "Assam": "AS", "Bihar": "BR", "Chhattisgarh": "CG", "Goa": "GA",
   "Gujarat": "GJ", "Haryana": "HR", "Himachal Pradesh": "HP", "Jharkhand": "JH", "Karnataka": "KA", "Kerala": "KL", "Madhya Pradesh": "MP",
   "Maharashtra": "MH", "Manipur": "MN", "Meghalaya": "ML", "Mizoram": "MZ", "Nagaland": "NL", "Odisha": "OD", "Punjab": "PN", "Rajasthan": "RJ",
   "Sikkim": "SK", "Tamil Nadu": "TN", "Telangana": "TS", "Tripura": "TR", "Uttar Pradesh": "UP", "Uttarakhand": "UK", "West Bengal": "WB"
 };
 
-var stateRtoCount = {
+let stateRtoCount = {
   "Andhra Pradesh": 38, "Arunachal Pradesh": 16, "Assam": 34, "Bihar": 11, "Chhattisgarh": 30, "Goa": 6,
   "Gujarat": 38, "Haryana": 98, "Himachal Pradesh": 80, "Jharkhand": 24, "Karnataka": 71, "Kerala": 86, "Madhya Pradesh": 54,
   "Maharashtra": 50, "Manipur": 8, "Meghalaya": 14, "Mizoram": 9, "Nagaland": 8, "Odisha": 35, "Punjab": 99, "Rajasthan": 53,
