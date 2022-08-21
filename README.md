@@ -47,85 +47,6 @@ npm i pirated-data
   - [Full Name](#Full-Name)
   - [State Name](#State-Name)
   - [District Name](#District-Name)
-
-### To use the package's individual function
------------------------------------------------
-```
-// For getting first name 
-const userData = require('pirated-data');
-var startname = userData.firstNameGenerator();
-
-
-/* For getting last name */
-const userData = require('pirated-data');
-var lastName =userData.lastNameGenerator();
-
-/* For full name of an user */
-const userData = require('pirated-data');
-var fulName = userData.fullNameGenerator();
-
-
-// For getting Age
-const userData = require('pirated-data');
-var age = userData.adultAgeGenerator();
-
-// For getting mobile number
-const userData = require('pirated-data');
-var mobnum = userData.mobileNumberGenerator();
-
-// For getting financial card number
-const userData = require('pirated-data');
-var card = userData.financialCardGenerator();
-
-/* For getting Bank Name */
-const userData = require('pirated-data');
- var bnkName = userData.bankNameGenerator();
-
-// For getting AadharCard number
-const userData = require('pirated-data');
-var aadhar = userData.aadharNumberGenerator();
-
-//For getting email-id
-const userData = require('pirated-data');
-var eml = userData.emailIdGenerator();
-
-// For getting userId
-const userData = require('pirated-data');
-var usrId = userData.userId();
-
-// For getting Password
-/* pass the value of desired length of password inside the parenthesis. 
-It will give you the alphanumeric 
-*/
-const userData = require('pirated-data');
-var pwd = userData.password(10);
-
-/*For getting pancard number */
-var id = userData.panCardId();
-console.log(id);
-
-/*For getting passport number */
- const passNum = userData.passportNumber();
- console.log(passNum);
-
-/*For getting DL number */
-const dl = userData.drivinglicenseGenerator();
-console.log(dl);
-
-/* For generating Gendor of an user */
-const userData = require('pirated-data');
- var gender = userData.genderGenerator();
-
-/* For generating the state of an user */
-const userData = require('pirated-data');
- var state = userData.stateGenerator();
-
-/* For generating a district of an user */
-const userData = require('pirated-data');
- var dist = userData.distGenerator();
-
-
-```
 ### Pirated-Data also supports generate sets of data
 - [Address](#Address)
   - [Full Name](#Full-Name)
@@ -142,31 +63,44 @@ const userData = require('pirated-data');
   - [Weight](#Weight)
   - [Body Skin Color](#Body-Skin-Color)
 
+### Function List according to the Language
 
+This plugin/dependency/library is continuously increasing functionality for different languages. You can refer this table for use the function.
 
-To generate biological details and address use the below functions
-```
-/* To generate biological details of an user */
-const userData = require('pirated-data');
-  var biology = userData.BiologicalData();
+| Function   Name | Java | JavaScript |
+|---|---|---|
+| firstNameGenerator() | Yes | Yes |
+| lastNameGenerator() | Yes | Yes |
+| fullNameGenerator() | Yes | Yes |
+| mobileNumberGenerator() | Yes | Yes |
+| aadharNumberGenerator() | Yes | Yes |
+| emailIdGenerator() | Yes | Yes |
+| userIdGenerator() | Yes | Yes |
+| passwordGenerator(int length) | Yes | Yes |
+| randomNumberGenerator() | Yes | No |
+| randomNumberGenerator(int MaxNumber) | Yes | Yes |
+| panCardId() | Yes | Yes |
+| upiIdGenerator() | Yes | Yes |
+| hairColorGenerator() | Yes | Yes |
+| genderGenerator() | Yes | Yes |
+| birthDateTimeGenerator() | Yes | Yes |
+| eyeColorGenerator() | Yes | Yes |
+| bloodGroupGenerator() | Yes | Yes |
+| skinColorGenerator() | Yes | Yes |
+| weightGenerator() | Yes | Yes |
+| ageCalculation() | Yes | Yes |
+| passportNumber() | Yes | Yes |
+| drivinglicenseGenerator() | No | Yes |
+| BiologicalData() | No | Yes |
+| stateGenerator() | No | Yes |
+| distGenerator() | No | Yes |
+| addressGenerator() | No | Yes |
+| financialCardGenerator() | No | Yes |
+| hugeAddressGenerator(desiredDataSetNumber) | No | Yes |
+| hugeBiologicalDataGenerator(desiredDataSetNumber) | No | Yes |
 
-/* To generate Address of an user */
-const userData = require('pirated-data');
-var address = userData.addressGenerator();
+### To know how to use upper functions, you can refer corresponding language document available in this repo or you can visit our website [study and masti](https://studyandmasti.github.io/en/studyandmasti/home/) .
 
-/* To generate huge set of biological data */
-const userData = require('pirated-data');
-const desirednumber = 10;
-var bnchBio = userData.hugeBiologicalDataGenerator(desirednumber);
-console.log(bnchBio);
-It will generate the 10 sets of user data.
-
-/* To generate huge set of Address data */
-const userData = require('pirated-data');
-const desirednumber = 10;
-var bnchAddress = userData.hugeAddressGenerator(desirednumber);
-console.log(bnchAddress);
-```
 ## Need More feature
 _________________________________
 If you want to more feature of this package just create an issue [Here.](https://github.com/satya319/pirated-data/issues)
