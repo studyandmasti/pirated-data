@@ -63,7 +63,7 @@ npm i pirated-data
   - [Weight](#Weight)
   - [Body Skin Color](#Body-Skin-Color)
 
-### Function List according to the Language
+### Function Lists available according to the Language
 
 This plugin/dependency/library is continuously increasing functionality for different languages. You can refer this table for use the function.
 
