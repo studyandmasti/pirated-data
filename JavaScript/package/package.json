@@ -1,6 +1,6 @@
 {
   "name": "pirated-data",
-  "version": "2.0.01",
+  "version": "2.0.02",
   "description": "Generating sample user data like name, age, mobilenumber, aadharnumber etc for testing.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/satya319/pirated-data.git"
+    "url": "git+https://github.com/studyandmasti/pirated-data.git"
   },
   "keywords": [
     "sampledata",
@@ -16,12 +16,14 @@
     "user data",
     "test data",
     "Selenium mock data",
-    "cypress mock data"
+    "cypress mock data",
+    "JavaScript",
+    "Java"
   ],
   "author": "Satyajit319",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/satya319/pirated-data/issues"
+    "url": "https://github.com/studyandmasti/pirated-data/issues"
   },
-  "homepage": "https://github.com/satya319/pirated-data#readme"
+  "homepage": "https://github.com/studyandmasti/pirated-data#readme"
 }

@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="#">
-    <img alt="Pirated-Data" src="https://github.com/satya319/pirated-data/blob/main/JavaScript/package/Images/pirated-data-logo.png?raw=true"width="100" height="100" />
+    <img alt="Pirated-Data" src="https://github.com/studyandmasti/pirated-data/blob/main/JavaScript/package/Images/pirated-data-logo.png?raw=true"width="100" height="100" />
   </a>
 </p>
 <h1 align="center">
@@ -22,11 +22,13 @@ npm i pirated-data
 - [Mobile number](#Mobile-number)
 - [Aadhar number ( unique identification number)](#Aadhar-number-(unique-identification-number))
 - [Email-id](#Email-id)
+- [Upi-Id](#Upi-Id)
 - [User Id](#User-Id)
 - [Password](#Password)
 - [PanCard ID](#PanCard-ID)
 - [Passport Number](#Passport-Number)
 - [Driving license number](#Driving-license-number)
+- [Random number](#Random-Number)
 - [Financial card](#Financial-card)
   - [Card Number](#Card-Number)
   - [Card Holder Name](#Card-Holder-Name)
@@ -123,6 +125,10 @@ const userData = require('pirated-data');
 /* For generating a district of an user */
 const userData = require('pirated-data');
  var dist = userData.distGenerator();
+ 
+/* For generating random number upto a certain range */
+const userData = require('pirated-data');
+var randomNumber = userData.randomNumberGenerator(MaxLimit);
 
 
 ```
