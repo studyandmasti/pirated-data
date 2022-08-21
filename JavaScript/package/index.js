@@ -3,7 +3,7 @@
  */
 
 const { firstMaleName, title, emlDomain, upiDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateDist,
-  stateList,stateRtoCode,stateRtoCount  } = require('./dataProvider.js');
+  stateList, stateRtoCode, stateRtoCount } = require('./dataProvider.js');
 
 let actfirName = "";
 let actlstName = "";
@@ -19,8 +19,8 @@ let actSkinColor = "";
 let actStateName = "";
 let actDistName = "";
 let actCardFullDetails = "";
-let actUpiId="";
-let actMobileNumber="";
+let actUpiId = "";
+let actMobileNumber = "";
 let firstDate1 = "";
 let actAge = "";
 let secondDate = new Date(2012, 4, 12);// every year to be increase one year.
@@ -95,13 +95,13 @@ exports.emailIdGenerator = emailIdGenerator;
  * This function can generate random upi Id.
  * @returns upiId
  */
-function upiIdGenerator(){
-if(actMobileNumber==""){
-  this.mobileNumberGenerator();
-}
-let upiIdIndex = Math.floor(Math.random() * 35);
-actUpiId = actMobileNumber + upiDomain[upiIdIndex];
-return actUpiId;
+function upiIdGenerator() {
+  if (actMobileNumber == "") {
+    this.mobileNumberGenerator();
+  }
+  let upiIdIndex = Math.floor(Math.random() * 35);
+  actUpiId = actMobileNumber + upiDomain[upiIdIndex];
+  return actUpiId;
 }
 exports.upiIdGenerator = upiIdGenerator;
 /**
@@ -171,28 +171,28 @@ exports.passportNumber = passportNumber;
  * This function generates the random Driving license number.
  * @returns 
  */
-function drivinglicenseGenerator(){
+function drivinglicenseGenerator() {
   if (actStateName == "") {
     this.stateGenerator();
   }
-  if(actStateName){
-var rtoCode = stateRtoCode[actStateName];
+  if (actStateName) {
+    var rtoCode = stateRtoCode[actStateName];
   }
-  if(actStateName){
-    let rtoNum = Math.floor(Math.random() * stateRtoCount[actStateName]);
-   // actDistName = stateDist[actStateName];
-   if(rtoNum >=1 && rtoNum<10){
-    rtoNum ="0" + rtoNum ;
-   }
-   else if(rtoNum == 0){
-    rtoNum ="01";
-   }
+  if (actStateName) {
+    var rtoNum = Math.floor(Math.random() * stateRtoCount[actStateName]);
+    // actDistName = stateDist[actStateName];
+    if (rtoNum >= 1 && rtoNum < 10) {
+      rtoNum = "0" + rtoNum;
+    }
+    else if (rtoNum == 0) {
+      rtoNum = "01";
+    }
   }
   const yr = Math.floor(Math.random() * (2022 - 1998 + 1)) + 1998;
   const appNo = Math.floor(Math.random() * (8888888 - 1000000 + 1)) + 1000000;
   const dl = rtoCode + rtoNum + yr + appNo;
   let dlNum;
-  return dlNum =  dl;
+  return dlNum = dl;
 }
 exports.drivinglicenseGenerator = drivinglicenseGenerator;
 
@@ -222,7 +222,7 @@ function birthDateTimeGenerator() {
   const dy = firstDate2[2];
   firstDate1 = yr + "-" + mn + "-" + dy;
   return firstDate1;
-  
+
 }
 exports.birthDateTimeGenerator = birthDateTimeGenerator;
 /**
@@ -408,7 +408,7 @@ function distGenerator() {
   if (actStateName == "") {
     this.stateGenerator();
   }
-  if(actStateName){
+  if (actStateName) {
     let dis = Math.floor(Math.random() * stateList[actStateName]);
     actDistName = stateDist[actStateName][dis]
   }
@@ -500,7 +500,7 @@ exports.hugeBiologicalDataGenerator = hugeBiologicalDataGenerator;
  * This function generate random number 0 to 999999999999
  * @returns randomNumber
  */
- function randomNumberGenerator(maxNumber){
+function randomNumberGenerator(maxNumber) {
   var number = Math.floor(Math.random() * maxNumber);
   return number;
 }
