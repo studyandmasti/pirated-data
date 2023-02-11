@@ -122,33 +122,11 @@ pip install pirated-data
 
   - [Body Skin Color](#Body-Skin-Color)
 
-
-
-### Import to your TypeScript project 
+### Import to your python project
 
 ```
 
-import userData from 'pirated-data';
-
-```
-
-Example :</br>
-
-```
-
-import userData from 'pirated-data';
-
-let fulName = userData.userIdGenerator();
-
-    console.log("pirated data test: ",fulName);
-
-```
-
-### Import to your JavaScript project
-
-```
-
-const userData = require('pirated-data');
+import pirated_data as pd
 
 ```
 
@@ -168,30 +146,30 @@ print(x)
 | firstNameGenerator() | Yes | Yes | yes |
 | lastNameGenerator() | Yes | Yes | yes |
 | fullNameGenerator() | Yes | Yes | yes |
-| mobileNumberGenerator() | Yes | Yes | No |
-| aadharNumberGenerator() | Yes | Yes | No |
-| emailIdGenerator() | Yes | Yes | No |
-| userIdGenerator() | Yes | Yes | No |
-| passwordGenerator(int length) | Yes | Yes | No |
+| mobileNumberGenerator() | Yes | Yes | yes |
+| aadharNumberGenerator() | Yes | Yes | yes |
+| emailIdGenerator() | Yes | Yes | yes |
+| userIdGenerator() | Yes | Yes | yes |
+| passwordGenerator(int length) | Yes | Yes | yes |
 | randomNumberGenerator() | Yes | No | No |
 | randomNumberGenerator(int MaxNumber) | Yes | Yes | No |
-| panCardId() | Yes | Yes | No |
-| upiIdGenerator() | Yes | Yes | No |
-| hairColorGenerator() | Yes | Yes | No |
-| genderGenerator() | Yes | Yes | No |
+| panCardId() | Yes | Yes | Yes |
+| upiIdGenerator() | Yes | Yes | Yes |
+| hairColorGenerator() | Yes | Yes | Yes |
+| genderGenerator() | Yes | Yes | Yes |
 | birthDateTimeGenerator() | Yes | Yes | No |
-| eyeColorGenerator() | Yes | Yes | No |
-| bloodGroupGenerator() | Yes | Yes | No 
-| skinColorGenerator() | Yes | Yes | No |
-| weightGenerator() | Yes | Yes | No |
+| eyeColorGenerator() | Yes | Yes | Yes |
+| bloodGroupGenerator() | Yes | Yes | Yes | 
+| skinColorGenerator() | Yes | Yes | Yes |
+| weightGenerator() | Yes | Yes | Yes |
 | ageCalculation() | Yes | Yes | No |
-| passportNumber() | Yes | Yes | No |
+| passportNumber() | Yes | Yes | Yes |
 | drivinglicenseGenerator() | No | Yes | No |
 | BiologicalData() | No | Yes | No |
 | stateGenerator() | No | Yes | No |
 | distGenerator() | No | Yes | No |
 | addressGenerator() | No | Yes | No |
-| financialCardGenerator() | No | Yes | No |
+| financialCardGenerator() | No | Yes | Yes |
 | hugeAddressGenerator(desiredDataSetNumber) | No | Yes | No |
 | hugeBiologicalDataGenerator(desiredDataSetNumber) | No | Yes | No |
 

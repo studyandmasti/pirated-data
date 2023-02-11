@@ -1,4 +1,6 @@
+from random import randint, randrange
 import random
+import string
 
 
 #  @author Satyajit319 <satyajit319@gmail.com>
@@ -195,7 +197,9 @@ stateRtoCount = {
 
 actfirName = ""
 actlstName = ""
-actFullName = ""
+actfullName = ""
+actMobileNumber = 0
+upiNumber = 0
 
 
 def firstNameGenerator():
@@ -204,7 +208,9 @@ def firstNameGenerator():
             Returns:
                     Random First Name of a user (str)
     """
-    firstNameIndex = random.randint(0, len(firstMaleName))
+    firstNameIndex = randint(0, len(firstMaleName)-1)
+    global actfirName
+
     actfirName = firstMaleName[firstNameIndex]
     return actfirName
 
@@ -215,7 +221,9 @@ def lastNameGenerator():
             Returns:
                     Random Last Name of a user (str)
     """
-    lastNameIndex = random.randint(0, len(title))
+    lastNameIndex = randint(0, len(title)-1)
+    global actlstName
+
     actlstName = title[lastNameIndex]
     return actlstName
 
@@ -226,5 +234,221 @@ def fullNameGenerator():
         Returns:
           Random full Name of a user (str)
     """
-    actFullName = firstNameGenerator() + " " + lastNameGenerator()
+    global actfirName
+    global actlstName
+    if actfirName == "":
+        if actlstName == "":
+            lstNme = lastNameGenerator()
+            fstNme = firstNameGenerator()
+            actFullName = fstNme + " " + lstNme
+
+        else:
+            fstNme = firstNameGenerator()
+            actFullName = fstNme + " " + actlstName
+
+    elif actlstName == "":
+        lstNme = lastNameGenerator()
+        actFullName = actfirName + " " + lstNme
+    else:
+        actFullName = actfirName + " " + actlstName
     return actFullName
+
+
+def mobileNumberGenerator():
+    """
+      This function generates random mobile number.
+        Returns:
+          Random mobile number (number)
+    """
+    global actMobileNumber
+    actMobileNumber = randint(6000000000, 9999999999)
+    return actMobileNumber
+
+
+def aadharNumberGenerator():
+    """
+      This function generates aadharnumber of a person
+        Returns:
+          Random aadharnumber (number)
+    """
+    aadharNumber = randint(100000000000, 999999999999)
+    return aadharNumber
+
+
+def emailIdGenerator():
+    """
+      This function generates random emailid of a person
+        Returns:
+          Random emailid (string)
+    """
+    emlNumber = randint(1000, 9999)
+    domain = emlDomain[randint(0, len(emlDomain)-1)]
+    if actfirName == "":
+        firstNameGenerator()
+    emailId = actfirName+str(emlNumber)+'@'+domain
+    return emailId
+
+
+def userIdGenerator():
+    """
+      This function generates random userId for a person
+        Returns:
+          Random userId (string)
+    """
+    if actfirName == "":
+        firstNameGenerator()
+    userIdNum = randint(1000, 9999)
+    userId = actfirName + str(userIdNum)
+    return userId
+
+
+def passwordGenerator(length):
+    """
+      This function generates random password for a person
+        Returns:
+          Random password (string)
+    """
+    all = string.ascii_letters + string.digits + string.punctuation
+    password = "".join(random.sample(all, length))
+    return password
+
+
+def upiIdGenerator():
+    """
+      This function generates random upi for a person
+        Returns:
+          Random upi id (string)
+    """
+    global actMobileNumber
+    global upiNumber
+    if actMobileNumber == 0:
+        upiNumber = mobileNumberGenerator()
+        upiCmpny = upiDomain[randint(0, len(upiDomain)-1)]
+        upiNumber = str(actMobileNumber)+upiCmpny
+    else:
+        upiCmpny = upiDomain[randint(0, len(upiDomain)-1)]
+        upiNumber = str(actMobileNumber)+upiCmpny
+    return upiNumber
+
+
+def hairColorGenerator():
+    """
+      This function generates random hair of a person
+        Returns:
+          Random hair color (string)
+    """
+    haircolor = hairColor[randint(0, len(hairColor)-1)]
+    return haircolor
+
+
+def genderGenerator():
+    """
+      This function generates random gender of a person
+        Returns:
+          Random gender (string)
+    """
+    genderOfPerson = gender[randint(0, len(gender)-1)]
+    return genderOfPerson
+
+
+def eyeColorGenerator():
+    """
+      This function generates random eyecolor of a person
+        Returns:
+          Random eyecolor (string)
+    """
+    eyecolorOfPerson = eyeColor[randint(0, len(eyeColor)-1)]
+    return eyecolorOfPerson
+
+
+def bloodGroupGenerator():
+    """
+      This function generates random blood group of a person
+        Returns:
+          Random blood group (string)
+    """
+    bloodgrpOfPerson = bloodGroup[randint(0, len(bloodGroup)-1)]
+    return bloodgrpOfPerson
+
+
+def skinColorGenerator():
+    """
+      This function generates random skin color of a person
+        Returns:
+          Random skin color (string)
+    """
+    sknClr = skinColor[randint(0, len(skinColor)-1)]
+    return sknClr
+
+
+def weightGenerator():
+    """
+      This function generates random weight of a person
+        Returns:
+          Random weight (number)
+    """
+    wt = randint(30, 100)
+    return wt
+
+
+def panCardId():
+    """
+      This function generates random pancard number of a person
+        Returns:
+          Random pancard number (string)
+    """
+    global actlstName
+    result = ""
+    characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    panNo=""
+    for i in range(3):
+      result += characters[randint(0,len(characters)-1)]
+    if actlstName == "":
+      lastNameGenerator()
+      print(actlstName)
+      lastNamefirstChar = actlstName[0]
+      randNum = randint(1000,9999)
+      lstChar = characters[randint(0,len(characters)-1)]
+      panNo = result + "P" + lastNamefirstChar + str(randNum) + lstChar
+    else:
+      lastNamefirstChar = actlstName[0]
+      randNum = randint(1000,9999)
+      lstChar = characters[randint(0,len(characters)-1)]
+      panNo = result + "P" + lastNamefirstChar + str(randNum) + lstChar
+    return panNo
+
+def passportNumber():
+    """
+      This function generates random passport number of a person
+        Returns:
+          Random passport number (string)
+    """
+    characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    result =characters[randint(0,len(characters)-1)]
+    num = str(randint(100000000,999999999))
+    passNo = result + num
+    return passNo
+
+def financialCardGenerator():
+    """
+      This function generates random financial card details of a person
+        Returns:
+          Random financial card details [string, number, string, number]
+    """
+    global actfullName
+    if actfullName =="":
+      actfullName = fullNameGenerator()
+      validMnth = randint(1,12)
+      validYr  = randint(2023, 2028)
+      cvv = randint(100, 999)
+      visaElectronNum  = randint(4101110010111111, 4999999999999999)
+      validThru = str(validMnth) + "/" + str(validYr)
+      actCardFullDetails = [actfullName, visaElectronNum, validThru, cvv]
+    else:
+      validMnth = randint(1,12)
+      validYr  = randint(2023, 2028)
+      cvv = randint(100, 999)
+      visaElectronNum  = randint(4101110010111111, 4999999999999999)
+      validThru = str(validMnth) + "/" + str(validYr)
+      actCardFullDetails = [actfullName, visaElectronNum, validThru, cvv]
+    return actCardFullDetails

@@ -2,7 +2,9 @@ LICENSE
 README.md
 pyproject.toml
 src/pirated_data/__init__.py
+src/pirated_data/functionProvider.py
 src/pirated_data.egg-info/PKG-INFO
 src/pirated_data.egg-info/SOURCES.txt
 src/pirated_data.egg-info/dependency_links.txt
 src/pirated_data.egg-info/top_level.txt
+src/tests/test.py
