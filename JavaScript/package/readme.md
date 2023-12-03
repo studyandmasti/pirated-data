@@ -47,6 +47,8 @@ npm i pirated-data
   - [Full Name](#Full-Name)
   - [State Name](#State-Name)
   - [District Name](#District-Name)
+- [sentence](#sentence)
+- [Paragraph](#Paragraph)
 
 ### To use the package's individual function
 -----------------------------------------------

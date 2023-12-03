@@ -2,7 +2,7 @@
  * @author Satyajit319 <satyajit319@gmail.com>
  * date 27/03/2022
  */
-var firstMaleName = ['Hari', 'sam', 'Mukund', 'Nabaghan', 'Abhishek', 'Suresh', 'Santunu', 'Akashya', 'Haribol',
+let firstMaleName = ['Hari', 'sam', 'Mukund', 'Nabaghan', 'Abhishek', 'Suresh', 'Santunu', 'Akashya', 'Haribol',
   'Madhab', 'Balkrushna', 'Aarav', 'Vihaan', 'Vivaan', 'Ananya', 'Diya', 'Advik', 'Kabir', 'Anaya',
   'Aarav', 'Vivaan', 'Aditya', 'Vivaan', 'Vihaan', 'Arjun', 'Vivaan', 'Reyansh', 'Mohammed', 'Sai',
   'Arnav', 'Aayan', 'Krishna', 'Ishaan', 'Shaurya', 'Atharva', 'Advik', 'Pranav', 'Advaith', 'Aaryan',
@@ -51,7 +51,7 @@ var firstMaleName = ['Hari', 'sam', 'Mukund', 'Nabaghan', 'Abhishek', 'Suresh', 
   'Shripal', 'Shubham', 'Shyam', 'Shyamlal', 'Shyamveer', 'Sidharath', 'Sivam', 'Somnath', 'Sonu',
   'Subhakar', 'Subhas', 'Subhash', 'Sudhansu', 'Sudhir', 'Suhail', 'Sujeet'
 ];
-var title = ["Sahu", "Behera", "Nayak", "Das", "Pradhan", "Naik", "Majhi", "Jena", "Malik",
+let title = ["Sahu", "Behera", "Nayak", "Das", "Pradhan", "Naik", "Majhi", "Jena", "Malik",
   "Swain", "Patra", "Barik", "Mohanty", "Raut", "Bhoi", "Panda", "Sahoo", "Sethy", "Dei",
   "Biswal", "Singh", "Parida", "Munda", "Mahanta", "Mahapatra", "Samal", "Mishra", "Maharana",
   "Rana", "Dash", "Bag", "Dehuri", "Padhan", "Meher", "Gaud", "Pradhana", "Bibi", "Muduli", "Harijan",
@@ -123,17 +123,17 @@ var title = ["Sahu", "Behera", "Nayak", "Das", "Pradhan", "Naik", "Majhi", "Jena
   "Badamundi", "Kusulia", "Lahara", "Sarkar", "Biswakarma", "Baliarasin", "Kandh", "Sah", "Chaudhuri", "Kiro", "Misal", "Peda",
   "Sirika", "Jagadeb", "Guin", "Sidu", "Behara", "Garia", "Sana", "Modi", "Bilunga", "Satpathy", "Suar", "Adajuad", "Sikaka", "Suren", "Matia",
 ];
-var emlDomain = ['gmail.com', 'yahoo.com', 'hotmail.com', 'rediffmail.com', 'mns.com', 'github.com', 'bandu.com', 'baidu.com', 'aol.com', 'comcast.net'];
-var upiDomain = ['@BARODAMPAY', '@rbl', '@idbi', '@upi', '@aubank', '@axisbank', '@bandhan', '@dlb', '@indus', '@kbl', '@federal', '@sbi', '@uco',
+let emlDomain = ['gmail.com', 'yahoo.com', 'hotmail.com', 'rediffmail.com', 'mns.com', 'github.com', 'bandu.com', 'baidu.com', 'aol.com', 'comcast.net'];
+let upiDomain = ['@BARODAMPAY', '@rbl', '@idbi', '@upi', '@aubank', '@axisbank', '@bandhan', '@dlb', '@indus', '@kbl', '@federal', '@sbi', '@uco',
   '@yesbank', '@citi', '@citigold', '@dlb', '@dbs', '@freecharge', '@okhdfcbank', '@okaxis', '@oksbi', '@okicici', '@hsbc',
   '@idbi', '@icici', '@indianbank', '@allbank', '@kotak', '@ikwik', '@paytm', '@ybl', '@axl', '@ibl', '@sib']
-var gender = ['Male', 'Female', 'TransGender'];
-var hairColor = ['Black', 'Brown', 'Red', 'Blond'];
-var skinColor = ['Ivory', 'Beige', 'Alabaster', 'Honey', 'Carotenoid', 'Tan', 'Caramel', 'Bronze', 'Mahogany', 'Chestnut', 'Buff', 'Peaches', 'Umber', 'Praline', 'Espresso Brown', 'Porcelain', 'Hickory', 'Mustard', 'Sable', 'Almond', 'Bisque', 'Teak', 'Cacao', 'Pecan', 'Saddle Brown'];
-var bloodGroup = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
-var eyeColor = ['Brown', 'Blue', 'Hazel', 'Amber', 'Green', 'Gray', 'Red'];
-var stateName = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
-var stateDist = {
+let gender = ['Male', 'Female', 'TransGender'];
+let hairColor = ['Black', 'Brown', 'Red', 'Blond'];
+let skinColor = ['Ivory', 'Beige', 'Alabaster', 'Honey', 'Carotenoid', 'Tan', 'Caramel', 'Bronze', 'Mahogany', 'Chestnut', 'Buff', 'Peaches', 'Umber', 'Praline', 'Espresso Brown', 'Porcelain', 'Hickory', 'Mustard', 'Sable', 'Almond', 'Bisque', 'Teak', 'Cacao', 'Pecan', 'Saddle Brown'];
+let bloodGroup = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
+let eyeColor = ['Brown', 'Blue', 'Hazel', 'Amber', 'Green', 'Gray', 'Red'];
+let stateName = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
+let stateDist = {
   'Andhra Pradesh': ['Anantapuram', 'Chittoor', 'East Godavari', 'Guntur', 'YSR Kadapa', 'Krishna', 'Kurnool', 'Prakasam', 'Sri Potti Sriramulu Nellore', 'Srikakulam', 'Visakhapatnam', 'Vizianagaram', 'West Godavari'],
   'Arunachal Pradesh': ['Anjaw', 'Changlang', 'Dibang Valley', 'East Kameng', 'East Siang', 'Kamle', 'Kra Daadi', 'Kurung Kumey', 'Lepa Rada', 'Lohit', 'Longding', 'Lower Dibang Valley', 'Lower Siang', 'Lower Subansiri', 'Namsai', 'Pakke Kessang', 'Papum Pare', 'Shi Yomi', 'Siang', 'Tawang', 'Tirap', 'Upper Siang', 'Upper Subansiri', 'West Kameng', 'West Siang'],
   'Assam': ['Baksa', 'Barpeta', 'Biswanath', 'Bongaigaon', 'Cachar', 'Charaideo', 'Chirang', 'Darrang', 'Dhemaji', 'Dhubri', 'Dibrugarh', 'Dima Hasao', 'Goalpara', 'Golaghat', 'Hailakandi', 'Hojai', 'Jorhat', 'Kamrup', 'Kamrup Metropolitan', 'Karbi Anglong', 'Karimganj', 'Kokrajhar', 'Lakhimpur', 'Majuli', 'Morigaon', 'Nagaon', 'Nalbari', 'Sivasagar', 'South Salmara Mankachar', 'Sonitpur', 'Tinsukia', 'Udalguri', 'West Karbi Anglong'],
@@ -163,27 +163,178 @@ var stateDist = {
   'Uttarakhand': ['Almora', 'Bageshwar', 'Chamoli', 'Champawat', 'Dehradun', 'Haridwar', 'Nainital', 'Pauri Garhwal', 'Pithoragarh', 'Rudraprayag', 'Tehri Garhwal', 'Udham Singh Nagar', 'Uttarkashi'],
   'West Bengal': ['Alipurduar', 'Bankura', 'Birbhum', 'Cooch Behar', 'Dakshin Dinajpur (South Dinajpur)', 'Darjeeling', 'Hooghly', 'Howrah', 'Jalpaiguri', 'Jhargram', 'Kalimpong', 'Kolkata', 'Malda', 'Murshidabad', 'Nadia', 'North 24 Parganas', 'Paschim Medinipur (West Medinipur)', 'Paschim (West) Burdwan (Bardhaman)', 'Purba Burdwan (Bardhaman)', 'Purba Medinipur (East Medinipur)', 'Purulia', 'South 24 Parganas', 'Uttar Dinajpur (North Dinajpur)'],
 };
-var stateList = {
+let stateList = {
   "Andhra Pradesh": 13, "Arunachal Pradesh": 26, "Assam": 34, "Bihar": 38, "Chhattisgarh": 28, "Goa": 2,
   "Gujarat": 33, "Haryana": 22, "Himachal Pradesh": 12, "Jharkhand": 24, "Karnataka": 31, "Kerala": 14, "Madhya Pradesh": 52,
   "Maharashtra": 36, "Manipur": 16, "Meghalaya": 12, "Mizoram": 8, "Nagaland": 11, "Odisha": 30, "Punjab": 23, "Rajasthan": 33,
   "Sikkim": 4, "Tamil Nadu": 38, "Telangana": 33, "Tripura": 8, "Uttar Pradesh": 75, "Uttarakhand": 13, "West Bengal": 23
 };
 
-var stateRtoCode = {
+let stateRtoCode = {
   "Andhra Pradesh": "AP", "Arunachal Pradesh": "AR", "Assam": "AS", "Bihar": "BR", "Chhattisgarh": "CG", "Goa": "GA",
   "Gujarat": "GJ", "Haryana": "HR", "Himachal Pradesh": "HP", "Jharkhand": "JH", "Karnataka": "KA", "Kerala": "KL", "Madhya Pradesh": "MP",
   "Maharashtra": "MH", "Manipur": "MN", "Meghalaya": "ML", "Mizoram": "MZ", "Nagaland": "NL", "Odisha": "OD", "Punjab": "PN", "Rajasthan": "RJ",
   "Sikkim": "SK", "Tamil Nadu": "TN", "Telangana": "TS", "Tripura": "TR", "Uttar Pradesh": "UP", "Uttarakhand": "UK", "West Bengal": "WB"
 };
 
-var stateRtoCount = {
+let stateRtoCount = {
   "Andhra Pradesh": 38, "Arunachal Pradesh": 16, "Assam": 34, "Bihar": 11, "Chhattisgarh": 30, "Goa": 6,
   "Gujarat": 38, "Haryana": 98, "Himachal Pradesh": 80, "Jharkhand": 24, "Karnataka": 71, "Kerala": 86, "Madhya Pradesh": 54,
   "Maharashtra": 50, "Manipur": 8, "Meghalaya": 14, "Mizoram": 9, "Nagaland": 8, "Odisha": 35, "Punjab": 99, "Rajasthan": 53,
   "Sikkim": 8, "Tamil Nadu": 96, "Telangana": 36, "Tripura": 8, "Uttar Pradesh": 96, "Uttarakhand": 19, "West Bengal": 78
 };
+let randomSentences = [
+  "Improve your goldfish's physical fitness by getting him a bicycle.",
+  "If you don't like toenails, you probably shouldn't look at your feet.",
+  "The sudden rainstorm washed crocodiles into the ocean.",
+  "Jim liked driving around town with his hazard lights on.",
+  "The hawk didn’t understand why the ground squirrels didn’t want to be his friend.",
+  "She felt that chill that makes the hairs on the back of your neck when he walked into the room.",
+  "Courage and stupidity were all he had.",
+  "The fish listened intently to what the frogs had to say.",
+ "So long and thanks for the fish.",
+  "It's never been my responsibility to glaze the donuts.",
+  "The small white buoys marked the location of hundreds of crab pots.",
+ "He decided to fake his disappearance to avoid jail.",
+  "With the high wind warning",
+  "The team members were hard to tell apart since they all wore their hair in a ponytail.",
+  "He embraced his new life as an eggplant.",
+  "The ice-cream trucks bring back bad memories for all of us.",
+  "Last Friday I saw a spotted striped blue worm shake hands with a legless lizard.",
+  "She thought there'd be sufficient time if she hid her watch.",
+  "Nancy decided to make the porta-potty her home.",
+  "I come from a tribe of head-hunters, so I will never need a shrink.",
+ " Even with the snow falling outside, she felt it appropriate to wear her bikini.",
+  "Their argument could be heard across the parking lot.",
+  "The light that burns twice as bright burns half as long.",
+  "As the asteroid hurtled toward earth, Becky was upset her dentist appointment had been canceled.",
+  "He was willing to find the depths of the rabbit hole in order to be with her.",
+  "Peter found road kill an excellent way to save money on dinner.",
+  "The snow-covered path was no help in finding his way out of the back-country.",
+  "The hand sanitizer was actually clear glue.",
+  "He realized there had been several deaths on this road, but his concern rose when he saw the exact number.",
+  "Her scream silenced the rowdy teenagers.",
+  "He enjoys practicing his ballet in the bathroom.",
+  "The teens wondered what was kept in the red shed on the far edge of the school grounds.",
+  "Weather is not trivial - it's especially important when you're standing in it.",
+  "She wanted a pet platypus but ended up getting a duck and a ferret instead.",
+  "The most exciting eureka moment I've had was when I realized that the instructions on food packets were just guidelines.",
+  "It's not possible to convince a monkey to give you a banana by promising it infinite bananas when they die.",
+  "It didn't take long for Gary to detect the robbers were amateurs.",
+  "She was sad to hear that fireflies are facing extinction due to artificial light, habitat loss, and pesticides.",
+  "He had reached the point where he was paranoid about being paranoid.",
+  "I only enjoy window shopping when the windows are transparent.",
+  "Pink horses galloped across the sea.",
+  "He would only survive if he kept the fire going and he could hear thunder in the distance.",
+  "It didn't make sense unless you had the power to eat colors.",
+  "Bill ran from the giraffe toward the dolphin.",
+  "The wooden spoon couldn’t cut but left emotional scars.",
+  "For some unfathomable reason, the response team didn't consider a lack of milk for my cereal as a proper emergency.",
+  "Truth in advertising and dinosaurs with skateboards have much in common.",
+  "The tattered work gloves speak of the many hours of hard labor he endured throughout his life.",
+  "The toddler’s endless tantrum caused the entire plane anxiety.",
+  "The tears of a clown make my lipstick run, but my shower cap is still intact.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+  "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "The urgent care center was flooded with patients after the news of a new deadly virus was made public.",
+  "He learned the important lesson that a picnic at the beach on a windy day is a bad idea.",
+  "Alice was amazed by how quickly the sun rose over the horizon.",
+  "The kids were playing hide and seek behind the curtain.",
+  "The teacher asked the students to write down their favorite color using only one word each.",
+  "The cat purred contentedly while watching the birds through its binoculars.",
+  "The dog chased the squirrel until it got lost in the forest.",
+  "The man who owned the house was known for his love of gardening.",
+  "The woman who wore the pearl necklace was considered very elegant.",
+  "The girl who played the flute was the star of the concert.",
+  "The boy who painted the picture was very talented.",
+  "The baby who slept all night without crying was a happy child.",
+  "The couple who shared a bed were deeply in love.",
+  "The family who traveled together always stayed connected.",
+  "The person who cooked the best meal was highly appreciated.",
+  "The student who studied diligently passed the examination.",
+  "The athlete who trained daily became strong and healthy.",
+  "The artist who created beautiful paintings was renowned worldwide.",
+  "The scientist who discovered the antibiotic was hailed as a hero.",
+  "The musician who composed the symphony was recognized as a genius.",
+  "The writer who wrote the novel was praised for her literary skills.",
+  "The chef who prepared the perfect dish was celebrated by everyone.",
+  "The actor who acted in the play was admired for his acting abilities.",
+  "We have never been to Asia, nor have we visited Africa.",
+  "My grandmother has lived longer than anyone else I know.",
+  "I don't like the taste of green beans. They remind me too much of my mother-in-law.",
+  "I can't believe I forgot my glasses again!",
+  "Why did the tomato turn red? Because it saw the salad dressing!",
+  "What makes the sky blue? The sunsets, of course!",
+  "How does a tree become a tree? It grows upwards, just like a human!",
+  "Why did the elephant wear sunglasses? To protect his eyes from the bright light!",
+  "Why did the cow go to the doctor? She had an 'ugly moo!'!",
+  "He was sitting in a trash can with high street class.",
+  "She was so hungry she could eat a horse!",
+  "They are not arguing; they are just having a good conversation.",
+  "When will the rain stop falling? When the sun comes out!",
+  "Where does the water come from when you take a bath? From the tap!",
+  "The clouds formed beautiful animals in the sky that eventually created a tornado to wreak havoc.",
+  "If you want to travel far, start walking towards your dreams.",
+  "You cannot judge a book by its cover. You need to read it first.",
+  "Do not argue with someone who insists on being right. Instead, try to understand why they think what they say.",
+  "Life is what happens when you're busy making other plans.",
+  "It takes two to tango.",
+  "Don’t count your chicks before they hatch.",
+  "Education is the key to success.",
+  "Be careful what you wish for, because you might get it.",
+  "Do not let yesterday take up too much of today.",
+  "Happiness is not something readymade. It must be built by your own efforts.",
+  "An apple a day keeps the doctor away.",
+  "Love is blind, but marriage isn't.",
+  "To succeed in life, you need to work hard and stay positive.",
+  "Never give up on your dreams. Keep trying even if things seem impossible.",
+  "A smile is contagious. Share yours with others.",
+  "Believe in yourself and you will achieve anything.",
+  "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+  "In the end, it's not about winning or losing. It's about how you feel while playing the game.",
+  "The only way to do great work is to love what you do.",
+  "Your time is limited, so don’t waste it living someone else’s life.",
+  "Try not to become a man of leisure; rather become a man of action.",
+  "People often say that time waits for no one, but that’s not true. Patience waits for everyone.",
+  "Sometimes the best thing to do is nothing at all.",
+  "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+  "The future belongs to those who prepare for it today.",
+  "Life is not about waiting for the storm to pass; it’s about learning to dance in the rain.",
+  "You miss 100% of the shots you don’t take.",
+  "I have not failed. I've just found 10,000 ways that won't work.",
+  "Remember that happiness is not something you find, it’s something you create.",
+  "Every strike brings me closer to the ball.",
+  "The best way to predict the future is to invent it.",
+  "The whole point of going to school is to learn how to make money.",
+  "The only person you should try to impress is yourself.",
+  "The most difficult thing to understand is the universe itself.",
+  "The only way to truly fail is to give up.",
+  "There is no substitute for hard work.",
+  "The only way to keep your friends is to be true to yourself.",
+  "So long and thanks for the fish.",
+  "She works two jobs to make ends meet; at least, that was her reason for not having time to join us.",
+  "The only thing necessary for the triumph of evil is for good men to do nothing.",
+  "The only thing we have to fear is fear itself.",
+  "The only way to do well by means different from the best is to imitate the best.",
+  "The only way to get started is to quit talking and begin doing.",
+  "Time waits for nobody, especially not fools.",
+  "Today is the tomorrow you worried about yesterday.",
+  "Tomorrow is not so bad, after all.",
+  "Trust yourself. You know more than you think you do.",
+  "Two wrongs don’t make a right.",
+  "Victory has a thousand fathers; defeat is an orphan.",
+  "We are what we believe.",
+  "When the student is ready, the teacher appears.",
+  "Where there’s a will, there’s a way.",
+  "Without music, life would be a error.",
+  "Worry doesn’t help. All it does is make you miserable.",
+  "Years may come and go, but memories last forever.",
+  "You can't have everything, but you can have enough."
+];
 module.exports = {
   firstMaleName, title, emlDomain, upiDomain, gender, hairColor, skinColor, bloodGroup, eyeColor,
-  stateName, stateDist, stateList, stateRtoCode, stateRtoCount
+  stateName, stateDist, stateList, stateRtoCode, stateRtoCount,randomSentences
 };

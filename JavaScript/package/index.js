@@ -3,27 +3,27 @@
  */
 
 const { firstMaleName, title, emlDomain, upiDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateDist,
-  stateList,stateRtoCode,stateRtoCount  } = require('./dataProvider.js');
+  stateList, stateRtoCode, stateRtoCount, randomSentences } = require('./dataProvider.js');
 
-var actfirName = "";
-var actlstName = "";
-var actFullName = "";
-var actGender = "";
-var actHairColor = "";
-var actEyeColor = "";
-var panNo = "";
+let actfirName = "";
+let actlstName = "";
+let actFullName = "";
+let actGender = "";
+let actHairColor = "";
+let actEyeColor = "";
+let panNo = "";
 var passNo = "";
-var actBloodGroup = "";
-var actWeight = "";
-var actSkinColor = "";
-var actStateName = "";
-var actDistName = "";
-var actCardFullDetails = "";
-var actUpiId="";
-var actMobileNumber="";
-var firstDate1 = "";
-var actAge = "";
-var secondDate = new Date(2012, 4, 12);// every year to be increase one year.
+let actBloodGroup = "";
+let actWeight = "";
+let actSkinColor = "";
+let actStateName = "";
+let actDistName = "";
+let actCardFullDetails = "";
+let actUpiId = "";
+let actMobileNumber = "";
+let firstDate1 = "";
+let actAge = "";
+let secondDate = new Date(2012, 4, 12);// every year to be increase one year.
 
 
 /**
@@ -31,9 +31,9 @@ var secondDate = new Date(2012, 4, 12);// every year to be increase one year.
  * @returns firstName
  */
 function firstNameGenerator() {
-  var number = Math.floor(Math.random() * 469);
+  let number = Math.floor(Math.random() * firstMaleName.length );
   //var lengthofarray = firstMaleName.length;
-  return actfirName = firstMaleName[number];
+  return actfirName = firstMaleName[number-1];
 }
 exports.firstNameGenerator = firstNameGenerator;
 /**
@@ -41,8 +41,8 @@ exports.firstNameGenerator = firstNameGenerator;
  * @returns LastName
  */
 function lastNameGenerator() {
-  var number = Math.floor(Math.random() * 806);
-  return actlstName = title[number];
+  let number = Math.floor(Math.random() * title.length);
+  return actlstName = title[number-1];
 }
 exports.lastNameGenerator = lastNameGenerator;
 /**
@@ -56,20 +56,10 @@ function fullNameGenerator() {
   if (actlstName == "") {
     this.lastNameGenerator();
   }
-  var fullName = actfirName + " " + actlstName;
+  let fullName = actfirName + " " + actlstName;
   return actFullName = fullName;
 }
 exports.fullNameGenerator = fullNameGenerator;
-/**
- * This method is for generate random age between (18-99).
- * @returns age
- * @deprecated
- */
-function adultAgeGenerator() {
-  var age = Math.floor(Math.random() * (99 - 18 + 1)) + 18;
-  return ageYrs = age;
-}
-exports.adultAgeGenerator = adultAgeGenerator;
 /**
  * This method is for generate random mobile number
  * @returns MobileNumber
@@ -84,7 +74,7 @@ exports.mobileNumberGenerator = mobileNumberGenerator;
  * @returns aadharnumber
  */
 function aadharNumberGenerator() {
-  var adharNum = Math.floor(Math.random() * (999999999999 - 100000000000 + 1)) + 100000000000;
+  let adharNum = Math.floor(Math.random() * (999999999999 - 100000000000 + 1)) + 100000000000;
   return adharNum;
 }
 exports.aadharNumberGenerator = aadharNumberGenerator;
@@ -93,8 +83,8 @@ exports.aadharNumberGenerator = aadharNumberGenerator;
  * @returns emailId
  */
 function emailIdGenerator() {
-  var emlNum = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
-  var domain = Math.floor(Math.random() * 10);
+  let emlNum = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+  let domain = Math.floor(Math.random() * 10);
   if (actfirName == "") {
     this.firstNameGenerator();
   }
@@ -105,13 +95,13 @@ exports.emailIdGenerator = emailIdGenerator;
  * This function can generate random upi Id.
  * @returns upiId
  */
-function upiIdGenerator(){
-if(actMobileNumber==""){
-  this.mobileNumberGenerator();
-}
-var upiIdIndex = Math.floor(Math.random() * 35);
-actUpiId = actMobileNumber + upiDomain[upiIdIndex];
-return actUpiId;
+function upiIdGenerator() {
+  if (actMobileNumber == "") {
+    this.mobileNumberGenerator();
+  }
+  let upiIdIndex = Math.floor(Math.random() * upiDomain.length);
+  actUpiId = actMobileNumber + upiDomain[upiIdIndex-1];
+  return actUpiId;
 }
 exports.upiIdGenerator = upiIdGenerator;
 /**
@@ -122,7 +112,8 @@ function userIdGenerator() {
   if (actfirName == "") {
     this.firstNameGenerator();
   }
-  var usrIdNum = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+  let usrIdNum = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+  let userId;
   return userId = actfirName + usrIdNum;
 }
 exports.userIdGenerator = userIdGenerator;
@@ -133,10 +124,10 @@ exports.userIdGenerator = userIdGenerator;
  * @returns password
  */
 function passwordGenerator(len) {
-  var str = "";
-  for (var i = 0; i < len; i++) {
-    var rand = Math.floor(Math.random() * 62);
-    var charCode = rand += rand > 9 ? (rand < 36 ? 55 : 61) : 48;
+  let str = "";
+  for (let i = 0; i < len; i++) {
+    let rand = Math.floor(Math.random() * 62);
+    let charCode = rand += rand > 9 ? (rand < 36 ? 55 : 61) : 48;
     str += String.fromCharCode(charCode);
   }
   return str;
@@ -147,17 +138,17 @@ exports.passwordGenerator = passwordGenerator;
  * @returns panNo
  */
 function panCardId() {
-  var result = '';
-  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var charactersLength = characters.length;
-  for (var i = 0; i < 3; i++) {
+  let result = '';
+  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let charactersLength = characters.length;
+  for (let i = 0; i < 3; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   if (actlstName == "") {
     this.lastNameGenerator();
   }
-  var lastNamefirstChar = actlstName.substring(0, 1);
-  var num = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+  let lastNamefirstChar = actlstName.substring(0, 1);
+  let num = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
   const lastChar = characters.charAt(Math.floor(Math.random() * 26))
   panNo = result + "P" + lastNamefirstChar + num + lastChar;
   return panNo;
@@ -170,8 +161,8 @@ exports.panCardId = panCardId;
 function passportNumber() {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const charactersLength = characters.length;
-  result = characters.charAt(Math.floor(Math.random() * charactersLength));
-  var num = Math.floor(Math.random() * (999999999 - 100000000 + 1)) + 100000000;
+  let result = characters.charAt(Math.floor(Math.random() * charactersLength));
+  let num = Math.floor(Math.random() * (999999999 - 100000000 + 1)) + 100000000;
   passNo = result + num;
   return passNo;
 }
@@ -180,27 +171,28 @@ exports.passportNumber = passportNumber;
  * This function generates the random Driving license number.
  * @returns 
  */
-function drivinglicenseGenerator(){
+function drivinglicenseGenerator() {
   if (actStateName == "") {
     this.stateGenerator();
   }
-  if(actStateName){
-var rtoCode = stateRtoCode[actStateName];
+  if (actStateName) {
+    var rtoCode = stateRtoCode[actStateName];
   }
-  if(actStateName){
+  if (actStateName) {
     var rtoNum = Math.floor(Math.random() * stateRtoCount[actStateName]);
-   // actDistName = stateDist[actStateName];
-   if(rtoNum >=1 && rtoNum<10){
-    rtoNum ="0" + rtoNum ;
-   }
-   else if(rtoNum == 0){
-    rtoNum ="01";
-   }
+    // actDistName = stateDist[actStateName];
+    if (rtoNum >= 1 && rtoNum < 10) {
+      rtoNum = "0" + rtoNum;
+    }
+    else if (rtoNum == 0) {
+      rtoNum = "01";
+    }
   }
   const yr = Math.floor(Math.random() * (2022 - 1998 + 1)) + 1998;
   const appNo = Math.floor(Math.random() * (8888888 - 1000000 + 1)) + 1000000;
   const dl = rtoCode + rtoNum + yr + appNo;
-  return dlNum =  dl;
+  let dlNum;
+  return dlNum = dl;
 }
 exports.drivinglicenseGenerator = drivinglicenseGenerator;
 
@@ -209,7 +201,7 @@ exports.drivinglicenseGenerator = drivinglicenseGenerator;
  * @returns gender
  */
 function genderGenerator() {
-  var gen = Math.floor(Math.random() * 3);
+  let gen = Math.floor(Math.random() * 3);
   return actGender = gender[gen];
 }
 exports.genderGenerator = genderGenerator;
@@ -230,7 +222,7 @@ function birthDateTimeGenerator() {
   const dy = firstDate2[2];
   firstDate1 = yr + "-" + mn + "-" + dy;
   return firstDate1;
-  // return new Date();
+
 }
 exports.birthDateTimeGenerator = birthDateTimeGenerator;
 /**
@@ -241,7 +233,7 @@ function ageCalculation() {
   if (firstDate1 == "") {
     this.birthDateTimeGenerator();
   }
-  var firstDate = new Date(firstDate1);
+  let firstDate = new Date(firstDate1);
   secondDate = new Date();
   if (firstDate > secondDate)
     [firstDate, secondDate] = [secondDate, firstDate];
@@ -314,7 +306,7 @@ function getYearsDiff(startDate = new Date(), endDate = new Date()) {
  * @returns haircolor
  */
 function hairColorGenerator() {
-  var hairclr = Math.floor(Math.random() * 4);
+  let hairclr = Math.floor(Math.random() * 4);
   return actHairColor = hairColor[hairclr];
 }
 exports.hairColorGenerator = hairColorGenerator;
@@ -323,7 +315,7 @@ exports.hairColorGenerator = hairColorGenerator;
  * @returns eyecolor
  */
 function eyeColorGenerator() {
-  var eyeclr = Math.floor(Math.random() * 7);
+  let eyeclr = Math.floor(Math.random() * 7);
   return actEyeColor = eyeColor[eyeclr];
 }
 exports.eyeColorGenerator = eyeColorGenerator;
@@ -332,7 +324,7 @@ exports.eyeColorGenerator = eyeColorGenerator;
  * @returns bloodgroup
  */
 function bloodGroupGenerator() {
-  var bldgrp = Math.floor(Math.random() * 8);
+  let bldgrp = Math.floor(Math.random() * 8);
   return actBloodGroup = bloodGroup[bldgrp];
 }
 exports.bloodGroupGenerator = bloodGroupGenerator;
@@ -341,7 +333,7 @@ exports.bloodGroupGenerator = bloodGroupGenerator;
  * @returns weight
  */
 function weightGenerator() {
-  var wt = Math.floor(Math.random() * (109 - 35 + 1)) + 35;
+  let wt = Math.floor(Math.random() * (109 - 35 + 1)) + 35;
   return actWeight = wt;
 }
 exports.weightGenerator = weightGenerator;
@@ -350,7 +342,7 @@ exports.weightGenerator = weightGenerator;
  * @returns skincolor
  */
 function skinColorGenerator() {
-  var sknclr = Math.floor(Math.random() * 25);
+  let sknclr = Math.floor(Math.random() * 25);
   return actSkinColor = skinColor[sknclr];
 }
 exports.skinColorGenerator = skinColorGenerator;
@@ -403,7 +395,7 @@ exports.BiologicalData = BiologicalData;
  * @returns stateName
  */
 function stateGenerator() {
-  var number = Math.floor(Math.random() * 28);
+  let number = Math.floor(Math.random() * 28);
   return actStateName = stateName[number];
 }
 exports.stateGenerator = stateGenerator;
@@ -416,8 +408,8 @@ function distGenerator() {
   if (actStateName == "") {
     this.stateGenerator();
   }
-  if(actStateName){
-    var dis = Math.floor(Math.random() * stateList[actStateName]);
+  if (actStateName) {
+    let dis = Math.floor(Math.random() * stateList[actStateName]);
     actDistName = stateDist[actStateName][dis]
   }
   return actDistName;
@@ -453,11 +445,11 @@ function financialCardGenerator() {
   if (actFullName == "") {
     this.fullNameGenerator();
   }
-  var validMnth = Math.floor(Math.random() * 12);
-  var validYr = Math.floor(Math.random() * (2027 - 2022 + 1)) + 2022;
-  var cvv = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
-  var visaElectronNum = Math.floor(Math.random() * (4999999999999999 - 4101110010111111 + 1)) + 4101110010111111;
-  var validThru = validMnth + "/" + validYr;
+  let validMnth = Math.floor(Math.random() * 12);
+  let validYr = Math.floor(Math.random() * (2027 - 2022 + 1)) + 2022;
+  let cvv = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+  let visaElectronNum = Math.floor(Math.random() * (4999999999999999 - 4101110010111111 + 1)) + 4101110010111111;
+  let validThru = validMnth + "/" + validYr;
   actCardFullDetails = [actFullName, visaElectronNum, validThru, cvv];
   return actCardFullDetails;
 }
@@ -470,11 +462,11 @@ exports.financialCardGenerator = financialCardGenerator;
  * @returns bunchAddress
  */
 function hugeAddressGenerator(desiredDataSetNumber) {
-  var bunchAddress = [];
+  let bunchAddress = [];
   for (let i = 0; i < desiredDataSetNumber; i++) {
     actFullName = firstMaleName[Math.floor(Math.random() * 469)] + ' ' + title[Math.floor(Math.random() * 10)];
-    var state = this.stateGenerator();
-    var dist = this.distGenerator();
+    let state = this.stateGenerator();
+    let dist = this.distGenerator();
     bunchAddress.push([actFullName, state, dist]);
   }
   return bunchAddress;
@@ -487,20 +479,54 @@ exports.hugeAddressGenerator = hugeAddressGenerator;
  * @returns bunchBio
  */
 function hugeBiologicalDataGenerator(desiredDataSetNumber) {
-  var bunchBio = [];
+  let bunchBio = [];
   for (let i = 0; i < desiredDataSetNumber; i++) {
-    var fulName = firstMaleName[Math.floor(Math.random() * 469)] + ' ' + title[Math.floor(Math.random() * 10)];
-    var gen = gender[Math.floor(Math.random() * 3)];
-    var hairclr = hairColor[Math.floor(Math.random() * 4)];
+    let fulName = firstMaleName[Math.floor(Math.random() * 469)] + ' ' + title[Math.floor(Math.random() * 10)];
+    let gen = gender[Math.floor(Math.random() * 3)];
+    let hairclr = hairColor[Math.floor(Math.random() * 4)];
     //var age = Math.floor(Math.random() * (99 - 18 + 1)) + 18;
-    var dob = this.birthDateTimeGenerator();
-    var age = this.ageCalculation();
-    var eyeclr = eyeColor[Math.floor(Math.random() * 7)];
-    var bldGrp = bloodGroup[Math.floor(Math.random() * 8)];
-    var weight = Math.floor(Math.random() * (109 - 35 + 1)) + 35;
-    var sknClr = skinColor[Math.floor(Math.random() * 25)];
+    let dob = this.birthDateTimeGenerator();
+    let age = this.ageCalculation();
+    let eyeclr = eyeColor[Math.floor(Math.random() * 7)];
+    let bldGrp = bloodGroup[Math.floor(Math.random() * 8)];
+    let weight = Math.floor(Math.random() * (109 - 35 + 1)) + 35;
+    let sknClr = skinColor[Math.floor(Math.random() * 25)];
     bunchBio.push([fulName, gen, hairclr, dob, age, eyeclr, bldGrp, weight, sknClr]);
   }
   return bunchBio;
 }
 exports.hugeBiologicalDataGenerator = hugeBiologicalDataGenerator;
+/**
+ * This function generate random number 0 to 999999999999
+ * @returns randomNumber
+ */
+function randomNumberGenerator(maxNumber) {
+  var number = Math.floor(Math.random() * maxNumber);
+  return number;
+}
+exports.randomNumberGenerator = randomNumberGenerator;
+
+/**
+ * This function will generate random sentence
+ * @returns  random sentence
+ */
+function randomSentenceGenerator() {
+  let randomSentence = randomSentences[Math.floor(Math.random() * randomSentences.length) + 1];
+  return randomSentence;
+}
+exports.randomSentenceGenerator = randomSentenceGenerator;
+/**
+ * This function will generate random paragraph
+ * @param {*} sentenceCount 
+ * @returns random paragraph
+ */
+
+function randomParagraphGenerator(sentenceCount) {
+  const selectedSentences = [];
+  for (let i = 0; i < sentenceCount; i++) {
+    const randomIndex = Math.floor(Math.random() * randomSentences.length);
+    selectedSentences.push(randomSentences[randomIndex]);
+  }
+  return selectedSentences.join(' ');
+}
+exports.randomParagraphGenerator = randomParagraphGenerator;
