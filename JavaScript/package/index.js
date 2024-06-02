@@ -1,9 +1,9 @@
 /*!
- * @author Satyajit319 <satyajit319@gmail.com> * date 03/03/2022
+ * @author Satyajit319 <satyajit319@gmail.com> * date 03/03/2022 last updated: 12/04/2024
  */
 
 const { firstMaleName, title, emlDomain, upiDomain, gender, hairColor, skinColor, bloodGroup, eyeColor, stateName, stateDist,
-  stateList, stateRtoCode, stateRtoCount, randomSentences } = require('./dataProvider.js');
+  stateList, stateRtoCode, stateRtoCount, randomSentences, typeOfBusiness, companyNames, gstCodeArray, domainExtensionsArray } = require('./dataProvider.js');
 
 let actfirName = "";
 let actlstName = "";
@@ -23,7 +23,13 @@ let actUpiId = "";
 let actMobileNumber = "";
 let firstDate1 = "";
 let actAge = "";
-let secondDate = new Date(2012, 4, 12);// every year to be increase one year.
+let secondDate = new Date(2013, 4, 12);// every year to be increase one year.
+let actCompanyName = "";
+let actCompanyType = "";
+let actGSTNum = "";
+let actCompanyWebsite = "";
+let actAddress = [];
+
 
 
 /**
@@ -31,9 +37,9 @@ let secondDate = new Date(2012, 4, 12);// every year to be increase one year.
  * @returns firstName
  */
 function firstNameGenerator() {
-  let number = Math.floor(Math.random() * firstMaleName.length );
+  let number = Math.floor(Math.random() * firstMaleName.length);
   //var lengthofarray = firstMaleName.length;
-  return actfirName = firstMaleName[number-1];
+  return actfirName = firstMaleName[number - 1];
 }
 exports.firstNameGenerator = firstNameGenerator;
 /**
@@ -42,7 +48,7 @@ exports.firstNameGenerator = firstNameGenerator;
  */
 function lastNameGenerator() {
   let number = Math.floor(Math.random() * title.length);
-  return actlstName = title[number-1];
+  return actlstName = title[number - 1];
 }
 exports.lastNameGenerator = lastNameGenerator;
 /**
@@ -100,7 +106,7 @@ function upiIdGenerator() {
     this.mobileNumberGenerator();
   }
   let upiIdIndex = Math.floor(Math.random() * upiDomain.length);
-  actUpiId = actMobileNumber + upiDomain[upiIdIndex-1];
+  actUpiId = actMobileNumber + upiDomain[upiIdIndex - 1];
   return actUpiId;
 }
 exports.upiIdGenerator = upiIdGenerator;
@@ -212,7 +218,7 @@ exports.genderGenerator = genderGenerator;
  * @returns 
  */
 function birthDateTimeGenerator() {
-  const start = new Date("1935-01-01");
+  const start = new Date("1937-01-01");
   const end = new Date(2002, 0, 1);
   const dob = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   const r = dob.toISOString().slice(0, 10);
@@ -409,7 +415,8 @@ function distGenerator() {
     this.stateGenerator();
   }
   if (actStateName) {
-    let dis = Math.floor(Math.random() * stateList[actStateName]);
+    let dis = Math.floor(Math.random() * stateList[actStateName] - 1);
+    dis <= 0 ? dis = 0 : dis;
     actDistName = stateDist[actStateName][dis]
   }
   return actDistName;
@@ -432,7 +439,8 @@ function addressGenerator() {
   if (actDistName == "") {
     this.distGenerator();
   }
-  return [actFullName, actStateName, actDistName];
+  actAddress = [actFullName, actStateName, actDistName]
+  return actAddress;
 }
 exports.addressGenerator = addressGenerator;
 
@@ -530,3 +538,105 @@ function randomParagraphGenerator(sentenceCount) {
   return selectedSentences.join(' ');
 }
 exports.randomParagraphGenerator = randomParagraphGenerator;
+
+/**
+ * This function will generate random company names
+ * @returns random company names
+ */
+function randomCompanyNameGenerator() {
+  let randomIndex = Math.floor(Math.random() * companyNames.length);
+  let companyName = randomIndex === 0 ? companyNames[randomIndex] : companyNames[randomIndex - 1];
+  actCompanyName = companyName;
+  return actCompanyName;
+}
+exports.randomCompanyNameGenerator = randomCompanyNameGenerator;
+/**
+ * This function will generate random company types
+ * @returns random company category
+ */
+function randomBusinessTypeGenerator() {
+  let businessTypeIndex = Math.floor(Math.random() * typeOfBusiness.length);
+  actCompanyType = businessTypeIndex === 0 ? typeOfBusiness[businessTypeIndex] : typeOfBusiness[businessTypeIndex - 1];
+  return actCompanyType;
+}
+exports.randomBusinessTypeGenerator = randomBusinessTypeGenerator;
+/**
+ * This function will generate random GST numbers for a company
+ * @returns random GST number
+ */
+function randomGstNumberGenerator() {
+  let gstCodeArrayIndex = Math.floor(Math.random() * gstCodeArray.length);
+  let gststeCode;
+  gststeCode = gstCodeArrayIndex === 0 ? gstCodeArray[gstCodeArrayIndex] : gstCodeArray[gstCodeArrayIndex - 1];
+  let panId = this.panCardId();
+  let entityNum = () => Math.floor(Math.random() * 9) + 1;
+  let alphabet = () => String.fromCharCode(65 + Math.floor(Math.random() * 26));
+  let checkSumNum = () => Math.floor(Math.random() * 9) + 1;
+  actGSTNum = gststeCode + panId + entityNum() + alphabet() + checkSumNum();
+  return actGSTNum;
+}
+exports.randomGstNumberGenerator = randomGstNumberGenerator;
+/**
+ * This function can generate company url
+ * @returns  Company website
+ */
+function randomCompanyUrlGenerator() {
+  if (actCompanyName == "") {
+    this.randomCompanyNameGenerator();
+  }
+  let domainName = actCompanyName.replace(/\s/g, '');
+  let randomExtensionIndex = Math.floor(Math.random() * domainExtensionsArray.length);
+  let tld = randomExtensionIndex === 0 ? domainExtensionsArray[randomExtensionIndex] : domainExtensionsArray[randomExtensionIndex - 1];;
+  actCompanyWebsite = 'https://www.' + domainName.toLowerCase() + tld;
+  return actCompanyWebsite;
+}
+exports.randomCompanyUrlGenerator = randomCompanyUrlGenerator;
+
+/**
+ * This function will generate random company details in bundle
+ * @returns [Company name, Company type,  GST number, Website, Address, Helpline number, Founded date] 
+ * 
+ */
+function randomCompanyDetailsGenerator() {
+  if (actCompanyName == "") {
+    this.randomCompanyNameGenerator();
+  }
+  if (actCompanyType == "") {
+    this.randomBusinessTypeGenerator();
+  }
+  if (actGSTNum == "") {
+    this.randomGstNumberGenerator();
+  }
+  if (actCompanyWebsite == "") {
+    this.randomCompanyUrlGenerator();
+  }
+  if (actAddress == "") {
+    this.addressGenerator();
+  }
+  if (actMobileNumber == "") {
+    this.mobileNumberGenerator();
+  }
+  if (actFullName == "") {
+    this.fullNameGenerator();
+  }
+  if (firstDate1 == "") {
+    this.birthDateTimeGenerator();
+  }
+  let companyDetailBundle = [actCompanyName, actCompanyType, actFullName, actGSTNum, actCompanyWebsite, firstDate1, actMobileNumber, actAddress];
+  return companyDetailBundle;
+}
+exports.randomCompanyDetailsGenerator = randomCompanyDetailsGenerator;
+
+/**
+ * This function will generate random GUID
+ * @returns random GUID
+ */
+function randomGUIDGenerator() {
+  function s4() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
+exports.randomGUIDGenerator = randomGUIDGenerator;
